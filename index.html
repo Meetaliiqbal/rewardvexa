@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>RewardVexa — Explore Offers</title>
-  <meta name="description" content="Explore available offers and choose the one that's right for you.">
+  <title>RewardVexa — Rewards</title>
+  <meta name="description" content="Follow the steps to explore available reward offers.">
 
   <style>
     * {
@@ -33,183 +33,118 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    a {
-      text-decoration: none;
-    }
+    /* MAIN */
 
-    /* HEADER */
-
-    .header {
-      width: 100%;
-      background: rgba(255,255,255,.94);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .header-inner {
-      width: min(1120px, calc(100% - 36px));
-      height: 72px;
-      margin: auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      color: var(--text);
-      font-size: 21px;
-      font-weight: 800;
-      letter-spacing: -.5px;
-    }
-
-    .brand-mark {
-      width: 34px;
-      height: 34px;
-      border-radius: 10px;
-      background: var(--primary);
-      color: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 16px;
-      font-weight: 800;
-    }
-
-    .header-label {
-      font-size: 13px;
-      font-weight: 600;
-      color: var(--muted);
-    }
-
-    /* HERO */
-
-    .hero {
-      width: min(780px, calc(100% - 36px));
-      margin: 0 auto;
-      padding: 72px 0 46px;
-      text-align: center;
-    }
-
-    .hero-tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-      background: var(--soft);
-      color: var(--primary);
-      border-radius: 999px;
-      padding: 8px 13px;
-      font-size: 12px;
-      font-weight: 750;
-      margin-bottom: 19px;
-    }
-
-    .hero-tag span {
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: var(--primary);
-    }
-
-    .hero h1 {
-      font-size: clamp(36px, 6vw, 58px);
-      line-height: 1.04;
-      letter-spacing: -2.4px;
-      font-weight: 850;
-      margin-bottom: 19px;
-    }
-
-    .hero h1 strong {
-      color: var(--primary);
-    }
-
-    .hero-text {
-      max-width: 610px;
-      margin: auto;
-      color: var(--muted);
-      font-size: 17px;
-      line-height: 1.7;
-    }
-
-    /* OFFERS */
-
-    .offers-wrapper {
+    .page {
       width: min(1120px, calc(100% - 36px));
       margin: 0 auto;
-      padding-bottom: 58px;
+      padding: 42px 0 55px;
     }
 
     .offers {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
+      gap: 22px;
     }
+
+    /* CARD */
 
     .offer-card {
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: 22px;
-      padding: 25px;
+      padding: 20px;
       box-shadow: 0 8px 30px rgba(17, 24, 39, .045);
-      transition: transform .2s ease, box-shadow .2s ease;
       display: flex;
       flex-direction: column;
-      min-height: 330px;
+      min-width: 0;
     }
 
-    .offer-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 18px 40px rgba(17, 24, 39, .09);
-    }
+    /* BLANK GIFT CARD */
 
-    .offer-top {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+    .gift-card {
+      width: 100%;
+      height: 150px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, #f8f8fa 0%, #eeeeF2 100%);
+      border: 1px solid #e4e5e9;
+      position: relative;
+      overflow: hidden;
       margin-bottom: 24px;
     }
 
-    .offer-icon {
-      width: 58px;
-      height: 58px;
-      border-radius: 16px;
-      background: #f4f5f8;
+    .gift-card::before {
+      content: "";
+      position: absolute;
+      width: 145px;
+      height: 145px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.55);
+      top: -65px;
+      right: -35px;
+    }
+
+    .gift-card::after {
+      content: "";
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.38);
+      bottom: -55px;
+      left: -30px;
+    }
+
+    /* CONTENT */
+
+    .offer-title {
+      font-size: 21px;
+      line-height: 1.3;
+      font-weight: 800;
+      letter-spacing: -.4px;
+      margin-bottom: 18px;
+    }
+
+    .steps {
+      list-style: none;
       display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 25px;
-      font-weight: 850;
-      color: #171a27;
-    }
-
-    .offer-type {
-      font-size: 11px;
-      font-weight: 700;
-      color: #7b8496;
-      background: #f5f6f8;
-      border-radius: 999px;
-      padding: 7px 10px;
-    }
-
-    .offer-card h2 {
-      font-size: 23px;
-      line-height: 1.2;
-      margin-bottom: 10px;
-      letter-spacing: -.5px;
-    }
-
-    .offer-card p {
-      color: var(--muted);
-      font-size: 14px;
-      line-height: 1.65;
+      flex-direction: column;
+      gap: 13px;
       margin-bottom: 25px;
     }
 
+    .step {
+      display: flex;
+      align-items: flex-start;
+      gap: 11px;
+      color: #4f596b;
+      font-size: 14px;
+      line-height: 1.45;
+    }
+
+    .step-number {
+      flex: 0 0 25px;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      background: var(--soft);
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .step-text {
+      padding-top: 3px;
+    }
+
+    /* BUTTON */
+
     .offer-button {
-      margin-top: auto;
       width: 100%;
-      min-height: 48px;
+      min-height: 50px;
       border-radius: 12px;
       display: flex;
       align-items: center;
@@ -218,7 +153,9 @@
       color: #fff;
       font-size: 14px;
       font-weight: 750;
+      text-decoration: none;
       transition: background .2s ease, transform .2s ease;
+      margin-top: auto;
     }
 
     .offer-button:hover {
@@ -226,31 +163,14 @@
       transform: translateY(-1px);
     }
 
-    .arrow {
-      margin-left: 8px;
-      font-size: 17px;
-    }
+    /* NOTE */
 
-    /* INFO */
-
-    .info {
-      width: min(700px, calc(100% - 36px));
-      margin: 0 auto 52px;
+    .availability {
+      margin-top: 12px;
       text-align: center;
       color: #8a93a3;
-      font-size: 12px;
-      line-height: 1.65;
-    }
-
-    /* FOOTER */
-
-    footer {
-      border-top: 1px solid var(--border);
-      background: #fff;
-      padding: 25px 18px;
-      text-align: center;
-      color: #8a93a3;
-      font-size: 12px;
+      font-size: 11px;
+      line-height: 1.5;
     }
 
     /* TABLET */
@@ -258,62 +178,54 @@
     @media (max-width: 850px) {
       .offers {
         grid-template-columns: 1fr;
-        max-width: 540px;
-        margin: auto;
+        max-width: 560px;
+        margin: 0 auto;
       }
 
-      .offer-card {
-        min-height: auto;
-      }
-
-      .hero {
-        padding-top: 55px;
+      .gift-card {
+        height: 165px;
       }
     }
 
     /* MOBILE */
 
     @media (max-width: 520px) {
-      .header-inner {
+      .page {
         width: calc(100% - 28px);
-        height: 64px;
+        padding: 22px 0 35px;
       }
 
-      .brand {
-        font-size: 19px;
-      }
-
-      .header-label {
-        display: none;
-      }
-
-      .hero {
-        width: calc(100% - 30px);
-        padding: 42px 0 34px;
-      }
-
-      .hero h1 {
-        font-size: 38px;
-        letter-spacing: -1.7px;
-      }
-
-      .hero-text {
-        font-size: 15px;
-        line-height: 1.6;
-      }
-
-      .offers-wrapper {
-        width: calc(100% - 30px);
+      .offers {
+        gap: 18px;
       }
 
       .offer-card {
-        border-radius: 18px;
-        padding: 21px;
+        border-radius: 19px;
+        padding: 17px;
       }
 
-      .offer-icon {
-        width: 52px;
-        height: 52px;
+      .gift-card {
+        height: 145px;
+        border-radius: 15px;
+        margin-bottom: 21px;
+      }
+
+      .offer-title {
+        font-size: 20px;
+        margin-bottom: 17px;
+      }
+
+      .steps {
+        gap: 12px;
+        margin-bottom: 22px;
+      }
+
+      .step {
+        font-size: 13.5px;
+      }
+
+      .offer-button {
+        min-height: 50px;
       }
     }
   </style>
@@ -321,140 +233,156 @@
 
 <body>
 
-  <header class="header">
-    <div class="header-inner">
+  <main class="page">
 
-      <a href="#" class="brand">
-        <span class="brand-mark">R</span>
-        <span>RewardVexa</span>
-      </a>
+    <section class="offers">
 
-      <span class="header-label">Explore available offers</span>
+      <!-- AMAZON -->
 
-    </div>
-  </header>
+      <article class="offer-card">
+
+        <div class="gift-card" aria-label="Gift card image"></div>
+
+        <h2 class="offer-title">
+          Follow the steps to receive your reward
+        </h2>
+
+        <ol class="steps">
+
+          <li class="step">
+            <span class="step-number">1</span>
+            <span class="step-text">Click the button below</span>
+          </li>
+
+          <li class="step">
+            <span class="step-number">2</span>
+            <span class="step-text">Enter your details</span>
+          </li>
+
+          <li class="step">
+            <span class="step-number">3</span>
+            <span class="step-text">Complete 3 to 5 required deals</span>
+          </li>
+
+          <li class="step">
+            <span class="step-number">4</span>
+            <span class="step-text">Receive your reward once verified</span>
+          </li>
+
+        </ol>
+
+        <a
+          class="offer-button"
+          href="https://linkthem.net/aff_c?offer_id=340&aff_id=2281"
+        >
+          Get Started
+        </a>
+
+        <div class="availability">
+          Available in selected countries-US, UK, AU, CA
+        </div>
+
+      </article>
 
 
-  <main>
+      <!-- SHEIN -->
 
-    <section class="hero">
+      <article class="offer-card">
 
-      <div class="hero-tag">
-        <span></span>
-        Available Offers
-      </div>
+        <div class="gift-card" aria-label="Gift card image"></div>
 
-      <h1>
-        Find an offer<br>
-        <strong>you'll like.</strong>
-      </h1>
+        <h2 class="offer-title">
+          Follow the steps to receive your reward
+        </h2>
 
-      <p class="hero-text">
-        Explore the options below and choose the offer
-        you'd like to learn more about.
-      </p>
+        <ol class="steps">
+
+          <li class="step">
+            <span class="step-number">1</span>
+            <span class="step-text">Click the button below</span>
+          </li>
+
+          <li class="step">
+            <span class="step-number">2</span>
+            <span class="step-text">Enter your details</span>
+          </li>
+
+          <li class="step">
+            <span class="step-number">3</span>
+            <span class="step-text">Complete 3 to 5 required deals</span>
+          </li>
+
+          <li class="step">
+            <span class="step-number">4</span>
+            <span class="step-text">Receive your reward once verified</span>
+          </li>
+
+        </ol>
+
+        <a
+          class="offer-button"
+          href="https://linkthem.net/aff_c?offer_id=1229&aff_id=2281"
+        >
+          Get Started
+        </a>
+
+        <div class="availability">
+          Available in selected countries-US, UK, AU, CA
+        </div>
+
+      </article>
+
+
+      <!-- CASH APP -->
+
+      <article class="offer-card">
+
+        <div class="gift-card" aria-label="Gift card image"></div>
+
+        <h2 class="offer-title">
+          Follow the steps to receive your reward
+        </h2>
+
+        <ol class="steps">
+
+          <li class="step">
+            <span class="step-number">1</span>
+            <span class="step-text">Click the button below</span>
+          </li>
+
+          <li class="step">
+            <span class="step-number">2</span>
+            <span class="step-text">Enter your details</span>
+          </li>
+
+          <li class="step">
+            <span class="step-number">3</span>
+            <span class="step-text">Complete 3 to 5 required deals</span>
+          </li>
+
+          <li class="step">
+            <span class="step-number">4</span>
+            <span class="step-text">Receive your reward once verified</span>
+          </li>
+
+        </ol>
+
+        <a
+          class="offer-button"
+          href="https://linkthem.net/aff_c?offer_id=1846&aff_id=2281"
+        >
+          Get Started
+        </a>
+
+        <div class="availability">
+          Available in selected countries-US, UK, AU, CA
+        </div>
+
+      </article>
 
     </section>
-
-
-    <section class="offers-wrapper">
-
-      <div class="offers">
-
-        <!-- AMAZON -->
-
-        <article class="offer-card">
-
-          <div class="offer-top">
-            <div class="offer-icon">A</div>
-            <div class="offer-type">Offer</div>
-          </div>
-
-          <h2>Amazon</h2>
-
-          <p>
-            Explore the available Amazon offer and
-            continue to the offer page for details.
-          </p>
-
-          <a
-            class="offer-button"
-            href="https://linkthem.net/aff_c?offer_id=340&aff_id=2281"
-          >
-            Choose Offer <span class="arrow">→</span>
-          </a>
-
-        </article>
-
-
-        <!-- SHEIN -->
-
-        <article class="offer-card">
-
-          <div class="offer-top">
-            <div class="offer-icon">S</div>
-            <div class="offer-type">Offer</div>
-          </div>
-
-          <h2>SHEIN</h2>
-
-          <p>
-            Explore the available SHEIN offer and
-            continue to the offer page for details.
-          </p>
-
-          <a
-            class="offer-button"
-            href="https://linkthem.net/aff_c?offer_id=1229&aff_id=2281"
-          >
-            Choose Offer <span class="arrow">→</span>
-          </a>
-
-        </article>
-
-
-        <!-- CASH APP -->
-
-        <article class="offer-card">
-
-          <div class="offer-top">
-            <div class="offer-icon">$</div>
-            <div class="offer-type">Offer</div>
-          </div>
-
-          <h2>Cash App</h2>
-
-          <p>
-            Explore the available Cash App offer and
-            continue to the offer page for details.
-          </p>
-
-          <a
-            class="offer-button"
-            href="https://linkthem.net/aff_c?offer_id=1846&aff_id=2281"
-          >
-            Choose Offer <span class="arrow">→</span>
-          </a>
-
-        </article>
-
-      </div>
-
-    </section>
-
-
-    <div class="info">
-      Offers, availability and eligibility may vary.
-      Please review the requirements displayed on the
-      destination page before continuing.
-    </div>
 
   </main>
-
-
-  <footer>
-    © 2026 RewardVexa. All rights reserved.
-  </footer>
 
 </body>
 </html>
