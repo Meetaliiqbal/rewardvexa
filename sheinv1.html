@@ -1,0 +1,929 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>RewardVexa | Trending Outfits & Fashion Inspiration</title>
+
+<meta name="description" content="Discover trending outfits, fashion ideas, style inspiration and viral fashion finds with RewardVexa.">
+
+<link rel="stylesheet" href="style.css">
+<style>
+*{
+box-sizing:border-box;
+}
+
+
+html{
+scroll-behavior:smooth;
+}
+
+
+body{
+
+margin:0;
+font-family:Arial,Helvetica,sans-serif;
+background:#fafafa;
+color:#222;
+line-height:1.6;
+
+}
+
+
+.page-wrapper{
+
+display:flex;
+flex-direction:column;
+
+}
+
+
+/* BRAND */
+
+.brand{
+
+max-width:1100px;
+width:100%;
+margin:25px auto 0;
+padding:0 20px;
+
+font-size:32px;
+font-weight:800;
+color:#7c3aed;
+
+}
+
+
+/* HERO */
+
+
+.hero{
+
+width:calc(100% - 30px);
+max-width:1000px;
+
+margin:25px auto;
+
+padding:55px 35px;
+
+text-align:center;
+
+background:linear-gradient(135deg,#ffffff,#f5edff);
+
+border-radius:32px;
+
+}
+
+
+
+.hero h1{
+
+font-size:44px;
+line-height:1.2;
+margin:0 0 18px;
+
+}
+
+
+
+.hero p{
+
+max-width:750px;
+margin:auto;
+
+font-size:18px;
+color:#666;
+
+}
+
+
+
+/* CATEGORY BUTTONS */
+
+
+.category-nav{
+
+max-width:1000px;
+width:calc(100% - 30px);
+
+margin:35px auto;
+
+display:flex;
+
+justify-content:center;
+
+flex-wrap:wrap;
+
+gap:15px;
+
+}
+
+
+
+.category-nav a{
+
+text-decoration:none;
+
+background:#fff;
+
+color:#222;
+
+padding:14px 22px;
+
+border-radius:50px;
+
+font-weight:600;
+
+box-shadow:0 8px 25px rgba(0,0,0,.08);
+
+transition:.3s;
+
+}
+
+
+
+.category-nav a:hover{
+
+background:#7c3aed;
+
+color:white;
+
+}
+
+
+
+
+
+/* OFFER */
+
+
+.offer-section{
+
+width:calc(100% - 30px);
+
+max-width:1000px;
+
+margin:45px auto;
+
+text-align:center;
+
+}
+
+
+
+.offer-card{
+
+max-width:450px;
+
+margin:auto;
+
+background:#fff;
+
+padding:30px;
+
+border-radius:30px;
+
+box-shadow:0 15px 45px rgba(0,0,0,.12);
+
+}
+
+
+
+.gift-card{
+
+width:100%;
+
+height:240px;
+
+object-fit:cover;
+
+border-radius:22px;
+
+}
+
+
+
+.offer-card h2{
+
+font-size:19px;
+
+}
+
+
+
+.offer-card h2:first-of-type{
+
+font-size:28px;
+
+}
+
+
+
+
+.steps{
+
+list-style:none;
+
+padding:0;
+
+margin:30px 0;
+
+text-align:left;
+
+}
+
+
+
+.step{
+
+display:flex;
+
+align-items:center;
+
+gap:15px;
+
+padding:15px;
+
+margin-bottom:15px;
+
+background:#f7f7f7;
+
+border-radius:16px;
+
+}
+
+
+
+.step-number{
+
+width:40px;
+
+height:40px;
+
+min-width:40px;
+
+border-radius:50%;
+
+background:#7c3aed;
+
+color:white;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-weight:bold;
+
+}
+
+
+
+
+.offer-button{
+
+display:block;
+
+width:100%;
+
+padding:17px;
+
+background:#7c3aed;
+
+color:white;
+
+text-decoration:none;
+
+font-size:18px;
+
+font-weight:bold;
+
+border-radius:15px;
+
+}
+
+
+
+.availability{
+
+margin-top:15px;
+
+font-size:13px;
+
+color:#777;
+
+}
+
+
+
+
+
+
+
+/* CATEGORY CONTENT */
+
+
+.category-content{
+
+width:calc(100% - 30px);
+
+max-width:900px;
+
+margin:auto;
+
+}
+
+
+
+.content-box{
+
+background:white;
+
+padding:35px;
+
+margin:25px 0;
+
+border-radius:25px;
+
+box-shadow:0 8px 25px rgba(0,0,0,.06);
+
+scroll-margin-top:20px;
+
+}
+
+
+
+.content-box h2{
+
+font-size:28px;
+
+}
+
+
+
+.content-box p{
+
+color:#555;
+
+}
+
+
+
+
+
+
+
+/* ARTICLE */
+
+
+.article{
+
+width:calc(100% - 30px);
+
+max-width:900px;
+
+margin:45px auto;
+
+padding:35px;
+
+background:white;
+
+border-radius:28px;
+
+}
+
+
+
+.article h2{
+
+font-size:30px;
+
+}
+
+
+
+.article p{
+
+color:#555;
+
+font-size:17px;
+
+}
+
+
+
+
+
+/* FOOTER */
+
+
+footer{
+
+text-align:center;
+
+padding:40px 20px;
+
+font-size:14px;
+
+color:#777;
+
+}
+
+
+
+
+
+
+/* =========================
+   MOBILE ONLY ORDER CHANGE
+========================= */
+
+
+@media(max-width:700px){
+
+
+.brand{
+
+order:1;
+
+}
+
+
+
+.hero{
+
+order:2;
+
+}
+
+
+
+.offer-section{
+
+order:3;
+
+}
+
+
+
+.category-nav{
+
+order:4;
+
+}
+
+
+
+.category-content{
+
+order:5;
+
+}
+
+
+
+.article{
+
+order:6;
+
+}
+
+
+
+footer{
+
+order:7;
+
+}
+
+
+
+
+
+.hero h1{
+
+font-size:30px;
+
+}
+
+
+
+.hero{
+
+padding:35px 20px;
+
+}
+
+
+
+.category-nav a{
+
+width:100%;
+
+text-align:center;
+
+}
+
+
+
+.offer-card{
+
+padding:22px;
+
+}
+
+
+
+.content-box,
+.article{
+
+padding:25px;
+
+}
+
+
+}
+</style>
+</head>
+
+<body>
+
+
+<div class="page-wrapper">
+
+
+<!-- RewardVexa Branding -->
+
+<header class="brand">
+
+RewardVexa 
+
+</header>
+
+
+
+
+<!-- Universal Pinterest Fashion Hero -->
+
+<section class="hero">
+
+<h1>
+Discover Trending Outfits & Fashion Ideas Everyone Is Loving
+</h1>
+
+
+<p>
+Explore viral fashion trends, outfit inspiration, seasonal styles,
+and popular fashion discoveries. RewardVexa brings you ideas that help
+you discover your next favorite look.
+</p>
+
+
+</section>
+
+
+
+
+
+<!-- Category Buttons -->
+
+<nav class="category-nav">
+
+
+<a href="#outfits">
+👗 Trending Outfits
+</a>
+
+
+<a href="#style">
+✨ Style Inspiration
+</a>
+
+
+<a href="#accessories">
+👜 Accessories & Bags
+</a>
+
+
+<a href="#shoes">
+👟 Shoes & Looks
+</a>
+
+
+<a href="#seasonal">
+🌸 Seasonal Fashion
+</a>
+
+
+<a href="#viral">
+🔥 Viral Finds
+</a>
+
+
+</nav>
+
+
+
+
+
+
+
+<!-- CPA OFFER CARD -->
+
+
+<section class="offer-section">
+
+
+<article class="offer-card">
+
+
+<img
+class="gift-card"
+src="/fashion.jpg"
+alt="Fashion offer"
+>
+
+
+
+<h2>
+Fashion Offers
+</h2>
+
+
+<h2>
+Follow the steps to receive your reward
+</h2>
+
+
+
+
+<ol class="steps">
+
+
+<li class="step">
+
+<span class="step-number">
+1
+</span>
+
+<span class="step-text">
+Click the button below
+</span>
+
+</li>
+
+
+
+<li class="step">
+
+<span class="step-number">
+2
+</span>
+
+<span class="step-text">
+Enter your email + basic info
+</span>
+
+</li>
+
+
+
+<li class="step">
+
+<span class="step-number">
+3
+</span>
+
+<span class="step-text">
+Complete 3 to 5 required deals
+</span>
+
+</li>
+
+
+
+<li class="step">
+
+<span class="step-number">
+4
+</span>
+
+<span class="step-text">
+Receive your reward once verified
+</span>
+
+</li>
+
+
+
+</ol>
+
+
+
+
+<a class="offer-button"
+href="YOUR_CPA_LINK">
+
+Get Started
+
+</a>
+
+
+
+
+<div class="availability">
+
+Available in selected countries-US, UK, AU, CA
+
+</div>
+
+
+
+</article>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- CATEGORY CONTENT SECTIONS -->
+
+
+<section class="category-content">
+
+
+
+<div id="outfits" class="content-box">
+
+<h2>
+Trending Outfits
+</h2>
+
+<p>
+Discover popular outfit ideas, casual looks, and trending combinations
+that are getting attention online.
+</p>
+
+</div>
+
+
+
+
+
+<div id="style" class="content-box">
+
+<h2>
+Style Inspiration
+</h2>
+
+<p>
+Explore creative styling ideas, outfit combinations, and fashion
+inspiration for different occasions.
+</p>
+
+</div>
+
+
+
+
+
+<div id="accessories" class="content-box">
+
+<h2>
+Accessories & Bags
+</h2>
+
+<p>
+Find trending accessories, bags, and fashion details that complete
+your style.
+</p>
+
+</div>
+
+
+
+
+
+<div id="shoes" class="content-box">
+
+<h2>
+Shoes & Looks
+</h2>
+
+<p>
+Discover footwear trends and everyday outfit inspiration.
+</p>
+
+</div>
+
+
+
+
+
+<div id="seasonal" class="content-box">
+
+<h2>
+Seasonal Fashion
+</h2>
+
+<p>
+Explore summer, winter, and seasonal fashion inspiration.
+</p>
+
+</div>
+
+
+
+
+
+<div id="viral" class="content-box">
+
+<h2>
+Viral Fashion Finds
+</h2>
+
+<p>
+Discover popular fashion ideas and styles trending online.
+</p>
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- SHORT ARTICLE -->
+
+
+<section class="article">
+
+
+<h2>
+Latest Fashion Trends & Outfit Inspiration
+</h2>
+
+
+<p>
+Fashion changes every season with new styles, colors, and outfit ideas
+becoming popular. From casual everyday looks to elegant outfits, people
+are always searching for fresh inspiration.
+</p>
+
+
+<p>
+Discovering new fashion ideas can help refresh your wardrobe and create
+looks that match your personality. Trending styles are about combining
+comfort, creativity, and personal taste.
+</p>
+
+
+<p>
+RewardVexa helps you explore popular fashion inspiration and discover
+new style ideas from trending online collections.
+</p>
+
+
+</section>
+
+
+
+
+
+
+
+<footer>
+
+<p>
+© 2026 RewardVexa. All rights reserved.
+</p>
+
+<p>
+Privacy Policy | Terms | Contact | Disclaimer
+</p>
+
+</footer>
+
+
+
+</div>
+
+
+</body>
+</html>
