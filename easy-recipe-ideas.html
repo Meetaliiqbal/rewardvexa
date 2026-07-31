@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RewardVexa | Delicious Recipes & Culinary Inspiration</title>
+<meta name="description" content="Discover easy weeknight dinners, aesthetic food ideas, global cuisines, baking treats, and claim exclusive rewards with RewardVexa.">
+
+<style>
+/* ==========================================
+   RESET & BASE STYLES
+========================================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: #fafaf9;
+  color: #1c1917;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ==========================================
+   HEADER & BRANDING
+========================================== */
+.brand-header {
+  max-width: 1100px;
+  width: 100%;
+  margin: 20px auto 10px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand-logo {
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: #ea580c; /* Warm Culinary Orange/Coral Accent */
+  text-decoration: none;
+}
+
+.trust-badge-pill {
+  background: #ffedd5;
+  color: #c2410c;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 50px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ==========================================
+   HERO SECTION
+========================================== */
+.hero {
+  width: calc(100% - 30px);
+  max-width: 1000px;
+  margin: 15px auto 30px;
+  padding: 45px 35px;
+  text-align: center;
+  background: linear-gradient(135deg, #ffffff 0%, #fff7ed 100%);
+  border: 1px solid #fed7aa;
+  border-radius: 28px;
+}
+
+.hero-tag {
+  display: inline-block;
+  background: #ffffff;
+  color: #ea580c;
+  font-weight: 700;
+  font-size: 13px;
+  padding: 6px 16px;
+  border-radius: 20px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.hero h1 {
+  font-size: 38px;
+  font-weight: 800;
+  line-height: 1.25;
+  margin: 0 0 16px;
+  color: #7c2d12;
+}
+
+.hero p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 17px;
+  color: #57534e;
+}
+
+/* ==========================================
+   CATEGORY NAVIGATION
+========================================== */
+.category-nav {
+  max-width: 1000px;
+  width: calc(100% - 30px);
+  margin: 0 auto 40px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.category-nav a {
+  text-decoration: none;
+  background: #ffffff;
+  color: #44403c;
+  padding: 12px 20px;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 600;
+  border: 1px solid #e7e5e4;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  transition: all 0.25s ease;
+}
+
+.category-nav a:hover {
+  background: #ea580c;
+  color: #ffffff;
+  border-color: #ea580c;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(234, 88, 12, 0.2);
+}
+
+/* ==========================================
+   UNTOUCHED CPA OFFER SECTION
+========================================== */
+.offer-section {
+  width: calc(100% - 30px);
+  max-width: 1000px;
+  margin: 10px auto 40px;
+}
+
+.offer-card {
+  max-width: 450px;
+  margin: auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 30px;
+  box-shadow: 0 15px 45px rgba(0,0,0,.12);
+  border: 1px solid #f3f4f6;
+}
+
+.gift-card {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 22px;
+}
+
+.offer-card h2 {
+  font-size: 19px;
+  margin: 15px 0 5px;
+  text-align: center;
+}
+
+.offer-card h2:first-of-type {
+  font-size: 28px;
+  margin-top: 15px;
+}
+
+.steps {
+  list-style: none;
+  padding: 0;
+  margin: 30px 0;
+  text-align: left;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  margin-bottom: 15px;
+  background: #f7f7f7;
+  border-radius: 16px;
+}
+
+.step-number {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  border-radius: 50%;
+  background: #7c3aed;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.step-text {
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+}
+
+.offer-button {
+  display: block;
+  width: 100%;
+  padding: 17px;
+  background: #7c3aed;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(124, 58, 237, 0.25);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.offer-button:hover {
+  background: #6d28d9;
+  transform: translateY(-2px);
+}
+
+.availability {
+  margin-top: 15px;
+  font-size: 13px;
+  color: #777;
+  text-align: center;
+}
+
+/* ==========================================
+   CONTENT SECTIONS & ARTICLES
+========================================== */
+.category-content, .article {
+  width: calc(100% - 30px);
+  max-width: 900px;
+  margin: 0 auto 30px;
+}
+
+.content-box {
+  background: #ffffff;
+  padding: 30px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  border: 1px solid #f5f5f4;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+  scroll-margin-top: 20px;
+}
+
+.content-box h2 {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0 0 10px;
+  color: #7c2d12;
+}
+
+.content-box p {
+  color: #57534e;
+  margin: 0;
+}
+
+.article {
+  background: #ffffff;
+  padding: 35px;
+  border-radius: 24px;
+  border: 1px solid #f5f5f4;
+}
+
+.article h2 {
+  font-size: 24px;
+  font-weight: 800;
+  margin-top: 0;
+  color: #7c2d12;
+}
+
+.article p {
+  color: #57534e;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* ==========================================
+   FOOTER & COMPLIANCE
+========================================== */
+footer {
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 13px;
+  color: #78716c;
+  margin-top: auto;
+}
+
+.footer-links {
+  margin-bottom: 12px;
+}
+
+.footer-links a {
+  color: #78716c;
+  text-decoration: none;
+  margin: 0 8px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.disclaimer {
+  max-width: 700px;
+  margin: 15px auto 0;
+  font-size: 11px;
+  color: #a8a29e;
+  line-height: 1.4;
+}
+
+/* ==========================================
+   MOBILE FUNNEL ORDER
+========================================== */
+@media (max-width: 700px) {
+  .brand-header { order: 1; }
+  .hero { order: 2; padding: 30px 20px; }
+  .offer-section { order: 3; margin: 10px auto 30px; }
+  .category-nav { order: 4; }
+  .category-content { order: 5; }
+  .article { order: 6; }
+  footer { order: 7; }
+
+  .hero h1 { font-size: 28px; }
+  .hero p { font-size: 15px; }
+
+  .category-nav a {
+    width: 100%;
+    text-align: center;
+  }
+
+  .offer-card { padding: 22px; }
+  .content-box, .article { padding: 25px; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="page-wrapper">
+
+  <!-- Brand Header -->
+  <header class="brand-header">
+    <a href="#" class="brand-logo">RewardVexa</a>
+    <span class="trust-badge-pill">Foodie Edition</span>
+  </header>
+
+  <!-- Pinterest Hero Section -->
+  <section class="hero">
+    <span class="hero-tag">🍳 Delicious Recipes & Meal Ideas</span>
+    <h1>Explore Easy Dinners, Aesthetic Baking & Culinary Trends</h1>
+    <p>Discover mouthwatering 30-minute recipes, artisanal baking guides, healthy comfort bowls, and viral kitchen secrets to elevate your daily meals.</p>
+  </section>
+
+  <!-- UNTOUCHED CPA OFFER SECTION -->
+  <section class="offer-section">
+    <article class="offer-card">
+      <img class="gift-card" src="/cashapp.jpg" alt="Fashion offer">
+
+      <h2>Doordash Offers</h2>
+      <h2>Follow the steps to receive your reward</h2>
+
+      <ol class="steps">
+        <li class="step">
+          <span class="step-number">1</span>
+          <span class="step-text">Click the button below</span>
+        </li>
+        <li class="step">
+          <span class="step-number">2</span>
+          <span class="step-text">Enter your email + basic info</span>
+        </li>
+        <li class="step">
+          <span class="step-number">3</span>
+          <span class="step-text">Complete 3 to 5 required deals</span>
+        </li>
+        <li class="step">
+          <span class="step-number">4</span>
+          <span class="step-text">Receive your reward once verified</span>
+        </li>
+      </ol>
+
+      <a class="offer-button" href="https://linkthem.net/aff_c?offer_id=455&aff_id=2281">Get Started</a>
+
+      <div class="availability">
+        Available in selected countries-US, UK, AU, CA
+      </div>
+    </article>
+  </section>
+
+  <!-- Category Navigation -->
+  <nav class="category-nav">
+    <a href="#quickdinners">⏱️ Quick Dinners</a>
+    <a href="#comfortfood">🍝 Comfort Food</a>
+    <a href="#healthyeats">🥗 Healthy Bowls</a>
+    <a href="#baking">🧁 Aesthetic Baking</a>
+    <a href="#globalflavors">🍜 Global Flavors</a>
+    <a href="#trendingfood">🔥 Viral Pinterest Recipes</a>
+  </nav>
+
+  <!-- Category Content Sections -->
+  <section class="category-content">
+    <div id="quickdinners" class="content-box">
+      <h2>Quick Dinners</h2>
+      <p>Whip up delicious weeknight meals in under 30 minutes with minimal cleanup, simple pantry ingredients, and flavor-packed steps.</p>
+    </div>
+
+    <div id="comfortfood" class="content-box">
+      <h2>Comfort Food</h2>
+      <p>Indulge in hearty pasta dishes, slow-cooked casseroles, warm soups, and classic cozy recipes made to nourish your soul.</p>
+    </div>
+
+    <div id="healthyeats" class="content-box">
+      <h2>Healthy Bowls</h2>
+      <p>Nourish your body with vibrant nourish bowls, fresh grain bowls, high-protein meal preps, and colorful plant-based salads.</p>
+    </div>
+
+    <div id="baking" class="content-box">
+      <h2>Aesthetic Baking</h2>
+      <p>Master artisanal sourdough, picture-perfect pastries, gooey cookies, and decadent dessert boards made for sweet cravings.</p>
+    </div>
+
+    <div id="globalflavors" class="content-box">
+      <h2>Global Flavors</h2>
+      <p>Take a culinary trip around the world with authentic street food favorites, aromatic spices, and regional specialty guides.</p>
+    </div>
+
+    <div id="trendingfood" class="content-box">
+      <h2>Viral Pinterest Recipes</h2>
+      <p>Browse the most saved aesthetic food boards, aesthetic café-style drinks, and viral cooking techniques trending right now.</p>
+    </div>
+  </section>
+
+  <!-- ARTICLE SECTION -->
+  <section class="article">
+    <h2>The Joy of Home Cooking: Bringing Flavor to Every Table</h2>
+    <p>Cooking is far more than just preparing a meal—it is a creative form of self-expression and a wonderful way to bring family and friends together. Bringing fresh ingredients together to build rich, comforting flavors turns everyday cooking into a satisfying and rewarding experience.</p>
+    <p>Whether you're exploring quick weeknight dinners or trying your hand at complex artisanal baking, keeping kitchen prep simple and fun makes all the difference. Cultivating basic culinary skills allows you to eat healthier, save time, and enjoy restaurant-quality dishes right from home.</p>
+    <p>RewardVexa brings together curated recipe ideas, kitchen tips, and food aesthetics to help spark your culinary creativity every single day.</p>
+  </section>
+
+  <!-- Footer & Compliance -->
+  <footer>
+    <div class="footer-links">
+      <a href="#">Privacy Policy</a> | 
+      <a href="#">Terms</a> | 
+      <a href="#">Contact</a> | 
+      <a href="#">Disclaimer</a>
+    </div>
+    <p>© 2026 RewardVexa. All rights reserved.</p>
+    <p class="disclaimer">
+      Disclaimer: RewardVexa is an independent platform for culinary inspiration and promotional rewards. Brand names belong to their respective owners. Participation in offers requires completing third-party sponsor steps.
+    </p>
+  </footer>
+
+</div>
+
+</body>
+</html>

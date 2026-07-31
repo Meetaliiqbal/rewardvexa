@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RewardVexa | Epic Road Trips & Global Escapes</title>
+<meta name="description" content="Discover secret travel gems, scenic road trip routes, luxury getaways, and claim travel rewards with RewardVexa.">
+
+<style>
+/* ==========================================
+   RESET & BASE STYLES
+========================================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: #f7fafc;
+  color: #1a202c;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ==========================================
+   HEADER & BRANDING
+========================================== */
+.brand-header {
+  max-width: 1100px;
+  width: 100%;
+  margin: 20px auto 10px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand-logo {
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: #0d9488; /* Teal Accent for Exploration */
+  text-decoration: none;
+}
+
+.trust-badge-pill {
+  background: #ccfbf1;
+  color: #0f766e;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 50px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ==========================================
+   HERO SECTION
+========================================== */
+.hero {
+  width: calc(100% - 30px);
+  max-width: 1000px;
+  margin: 15px auto 30px;
+  padding: 45px 35px;
+  text-align: center;
+  background: linear-gradient(135deg, #ffffff 0%, #f0fdfa 100%);
+  border: 1px solid #99f6e4;
+  border-radius: 28px;
+}
+
+.hero-tag {
+  display: inline-block;
+  background: #ffffff;
+  color: #0d9488;
+  font-weight: 700;
+  font-size: 13px;
+  padding: 6px 16px;
+  border-radius: 20px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.hero h1 {
+  font-size: 38px;
+  font-weight: 800;
+  line-height: 1.25;
+  margin: 0 0 16px;
+  color: #115e59;
+}
+
+.hero p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 17px;
+  color: #4b5563;
+}
+
+/* ==========================================
+   CATEGORY NAVIGATION
+========================================== */
+.category-nav {
+  max-width: 1000px;
+  width: calc(100% - 30px);
+  margin: 0 auto 40px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.category-nav a {
+  text-decoration: none;
+  background: #ffffff;
+  color: #374151;
+  padding: 12px 20px;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 600;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  transition: all 0.25s ease;
+}
+
+.category-nav a:hover {
+  background: #0d9488;
+  color: #ffffff;
+  border-color: #0d9488;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(13, 148, 136, 0.2);
+}
+
+/* ==========================================
+   UNTOUCHED CPA OFFER SECTION
+========================================== */
+.offer-section {
+  width: calc(100% - 30px);
+  max-width: 1000px;
+  margin: 10px auto 40px;
+}
+
+.offer-card {
+  max-width: 450px;
+  margin: auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 30px;
+  box-shadow: 0 15px 45px rgba(0,0,0,.12);
+  border: 1px solid #f3f4f6;
+}
+
+.gift-card {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 22px;
+}
+
+.offer-card h2 {
+  font-size: 19px;
+  margin: 15px 0 5px;
+  text-align: center;
+}
+
+.offer-card h2:first-of-type {
+  font-size: 28px;
+  margin-top: 15px;
+}
+
+.steps {
+  list-style: none;
+  padding: 0;
+  margin: 30px 0;
+  text-align: left;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  margin-bottom: 15px;
+  background: #f7f7f7;
+  border-radius: 16px;
+}
+
+.step-number {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  border-radius: 50%;
+  background: #7c3aed;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.step-text {
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+}
+
+.offer-button {
+  display: block;
+  width: 100%;
+  padding: 17px;
+  background: #7c3aed;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(124, 58, 237, 0.25);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.offer-button:hover {
+  background: #6d28d9;
+  transform: translateY(-2px);
+}
+
+.availability {
+  margin-top: 15px;
+  font-size: 13px;
+  color: #777;
+  text-align: center;
+}
+
+/* ==========================================
+   CONTENT SECTIONS & ARTICLES
+========================================== */
+.category-content, .article {
+  width: calc(100% - 30px);
+  max-width: 900px;
+  margin: 0 auto 30px;
+}
+
+.content-box {
+  background: #ffffff;
+  padding: 30px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  border: 1px solid #f3f4f6;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+  scroll-margin-top: 20px;
+}
+
+.content-box h2 {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0 0 10px;
+  color: #115e59;
+}
+
+.content-box p {
+  color: #4b5563;
+  margin: 0;
+}
+
+.article {
+  background: #ffffff;
+  padding: 35px;
+  border-radius: 24px;
+  border: 1px solid #f3f4f6;
+}
+
+.article h2 {
+  font-size: 24px;
+  font-weight: 800;
+  margin-top: 0;
+  color: #115e59;
+}
+
+.article p {
+  color: #4b5563;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* ==========================================
+   FOOTER & COMPLIANCE
+========================================== */
+footer {
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 13px;
+  color: #6b7280;
+  margin-top: auto;
+}
+
+.footer-links {
+  margin-bottom: 12px;
+}
+
+.footer-links a {
+  color: #6b7280;
+  text-decoration: none;
+  margin: 0 8px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.disclaimer {
+  max-width: 700px;
+  margin: 15px auto 0;
+  font-size: 11px;
+  color: #9ca3af;
+  line-height: 1.4;
+}
+
+/* ==========================================
+   MOBILE FUNNEL ORDER
+========================================== */
+@media (max-width: 700px) {
+  .brand-header { order: 1; }
+  .hero { order: 2; padding: 30px 20px; }
+  .offer-section { order: 3; margin: 10px auto 30px; }
+  .category-nav { order: 4; }
+  .category-content { order: 5; }
+  .article { order: 6; }
+  footer { order: 7; }
+
+  .hero h1 { font-size: 28px; }
+  .hero p { font-size: 15px; }
+
+  .category-nav a {
+    width: 100%;
+    text-align: center;
+  }
+
+  .offer-card { padding: 22px; }
+  .content-box, .article { padding: 25px; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="page-wrapper">
+
+  <!-- Brand Header -->
+  <header class="brand-header">
+    <a href="#" class="brand-logo">RewardVexa</a>
+    <span class="trust-badge-pill">Explorer Lookbook</span>
+  </header>
+
+  <!-- Pinterest Hero Section -->
+  <section class="hero">
+    <span class="hero-tag">🗺️ Secret Spots & Scenic Drives</span>
+    <h1>Discover Hidden Gems & Epic Road Trip Itineraries</h1>
+    <p>Unlock off-the-beaten-path locations, coast-to-coast drive guides, luxury boutique stays, and essential travel hacks for world wanderers.</p>
+  </section>
+
+  <!-- UNTOUCHED CPA OFFER SECTION -->
+  <section class="offer-section">
+    <article class="offer-card">
+      <img class="gift-card" src="/shein.jpg" alt="Fashion offer">
+
+      <h2>Priceline Offers</h2>
+      <h2>Follow the steps to receive your reward</h2>
+
+      <ol class="steps">
+        <li class="step">
+          <span class="step-number">1</span>
+          <span class="step-text">Click the button below</span>
+        </li>
+        <li class="step">
+          <span class="step-number">2</span>
+          <span class="step-text">Enter your email + basic info</span>
+        </li>
+        <li class="step">
+          <span class="step-number">3</span>
+          <span class="step-text">Complete 3 to 5 required deals</span>
+        </li>
+        <li class="step">
+          <span class="step-number">4</span>
+          <span class="step-text">Receive your reward once verified</span>
+        </li>
+      </ol>
+
+      <a class="offer-button" href="https://linkthem.net/aff_c?offer_id=4135&aff_id=2281">Get Started</a>
+
+      <div class="availability">
+        Available in selected countries-US, UK, AU, CA
+      </div>
+    </article>
+  </section>
+
+  <!-- Category Navigation -->
+  <nav class="category-nav">
+    <a href="#hiddengems">💎 Hidden Gems</a>
+    <a href="#roadtrips">🚗 Scenic Road Trips</a>
+    <a href="#solotravel">🧳 Solo Exploration</a>
+    <a href="#luxury">✨ Boutique Stays</a>
+    <a href="#foodie">🍝 Global Foodie Routes</a>
+    <a href="#viral">🔥 Most Saved Places</a>
+  </nav>
+
+  <!-- Category Content Sections -->
+  <section class="category-content">
+    <div id="hiddengems" class="content-box">
+      <h2>Hidden Gems</h2>
+      <p>Uncover secret coastal towns, lesser-known mountain villages, and quiet sanctuaries away from typical tourist crowds.</p>
+    </div>
+
+    <div id="roadtrips" class="content-box">
+      <h2>Scenic Road Trips</h2>
+      <p>Map out unforgettable drives featuring dramatic cliffside roads, sweeping desert highways, and picturesque forest bypasses.</p>
+    </div>
+
+    <div id="solotravel" class="content-box">
+      <h2>Solo Exploration</h2>
+      <p>Gain confidence traveling independently with safety checklists, hostel recommendations, and solo-friendly destination guides.</p>
+    </div>
+
+    <div id="luxury" class="content-box">
+      <h2>Boutique Stays</h2>
+      <p>Experience unique accommodations ranging from cliffside infinity pool resorts to cozy glass igloos and historic countryside manors.</p>
+    </div>
+
+    <div id="foodie" class="content-box">
+      <h2>Global Foodie Routes</h2>
+      <p>Find the best local street markets, hidden bistro gems, and authentic culinary experiences curated for hungry travelers.</p>
+    </div>
+
+    <div id="viral" class="content-box">
+      <h2>Most Saved Places</h2>
+      <p>Browse highly viral photography spots, cinematic viewpoints, and travel aesthetic boards trending right now.</p>
+    </div>
+  </section>
+
+  <!-- ARTICLE SECTION -->
+  <section class="article">
+    <h2>Wanderlust Journal: Finding Magic in Everyday Travel</h2>
+    <p>True adventure lies in the unexpected moments—discovering a tiny café down a cobblestone side street, taking a scenic detour on a coastal highway, or watching the sunset over a quiet mountain ridge. Travel isn't just about reaching a landmark; it’s about the memories crafted along the way.</p>
+    <p>By stepping away from overly crowded itineraries, you give yourself the freedom to connect with local traditions, taste authentic flavors, and build genuine travel experiences. Embracing flexibility and curiosity will transform any simple trip into a life-changing journey.</p>
+    <p>RewardVexa brings together curated destination guides and practical trip-planning tips to help you turn your bucket list into reality.</p>
+  </section>
+
+  <!-- Footer & Compliance -->
+  <footer>
+    <div class="footer-links">
+      <a href="#">Privacy Policy</a> | 
+      <a href="#">Terms</a> | 
+      <a href="#">Contact</a> | 
+      <a href="#">Disclaimer</a>
+    </div>
+    <p>© 2026 RewardVexa. All rights reserved.</p>
+    <p class="disclaimer">
+      Disclaimer: RewardVexa is an independent platform for travel inspiration and promotional rewards. Brand names belong to their respective owners. Participation in offers requires completing third-party sponsor steps.
+    </p>
+  </footer>
+
+</div>
+
+</body>
+</html>
