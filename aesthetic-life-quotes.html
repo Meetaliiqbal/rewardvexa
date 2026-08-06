@@ -3,21 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RewardVexa | Deep Wisdom & Life Reflections</title>
-<meta name="description" content="Explore life lessons, self-love reflections, creative mindset quotes, and claim exclusive rewards with RewardVexa.">
+<title>RewardVexa | Wisdom Vault & Exclusive Partner Perks</title>
+<meta name="description" content="Explore life lessons, self-love reflections, creative mindset quotes, and access exclusive partner rewards with RewardVexa.">
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-58GP9VDGM7"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-58GP9VDGM7');
 </script>
+
 <style>
-/* ==========================================
-   RESET & BASE STYLES
-========================================== */
+/* RESET & BASE STYLES */
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -41,9 +40,7 @@ body {
   min-height: 100vh;
 }
 
-/* ==========================================
-   HEADER & BRANDING
-========================================== */
+/* HEADER & BRANDING */
 .brand-header {
   max-width: 1100px;
   width: 100%;
@@ -58,7 +55,7 @@ body {
   font-size: 28px;
   font-weight: 800;
   letter-spacing: -0.5px;
-  color: #c2410c; /* Warm Terracotta / Burnt Orange Accent */
+  color: #c2410c;
   text-decoration: none;
 }
 
@@ -73,14 +70,12 @@ body {
   letter-spacing: 0.5px;
 }
 
-/* ==========================================
-   HERO SECTION
-========================================== */
+/* HERO SECTION */
 .hero {
   width: calc(100% - 30px);
   max-width: 1000px;
-  margin: 15px auto 30px;
-  padding: 45px 35px;
+  margin: 15px auto 25px;
+  padding: 40px 30px;
   text-align: center;
   background: linear-gradient(135deg, #ffffff 0%, #fff7ed 100%);
   border: 1px solid #fed7aa;
@@ -100,23 +95,166 @@ body {
 }
 
 .hero h1 {
-  font-size: 38px;
+  font-size: 36px;
   font-weight: 800;
   line-height: 1.25;
-  margin: 0 0 16px;
+  margin: 0 0 14px;
   color: #7c2d12;
 }
 
 .hero p {
   max-width: 700px;
   margin: 0 auto;
-  font-size: 17px;
+  font-size: 16px;
   color: #57534e;
 }
 
-/* ==========================================
-   CATEGORY NAVIGATION
-========================================== */
+/* HIGH-CVR CPA OFFER SECTION */
+.offer-section {
+  width: calc(100% - 30px);
+  max-width: 1000px;
+  margin: 10px auto 40px;
+}
+
+.offer-card {
+  max-width: 480px;
+  margin: auto;
+  background: #ffffff;
+  padding: 28px;
+  border-radius: 28px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+  border: 1px solid #f3f4f6;
+  position: relative;
+}
+
+.card-top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.status-badge {
+  color: #16a34a;
+  background: #dcfce7;
+  padding: 4px 10px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+  background-color: #16a34a;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.slots-left {
+  color: #dc2626;
+  background: #fee2e2;
+  padding: 4px 10px;
+  border-radius: 12px;
+}
+
+.gift-card {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 18px;
+  margin-bottom: 15px;
+}
+
+.offer-card h2 {
+  font-size: 24px;
+  font-weight: 800;
+  margin: 10px 0 5px;
+  text-align: center;
+  color: #111827;
+}
+
+.offer-subtitle {
+  font-size: 14px;
+  color: #6b7280;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.steps {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  text-align: left;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 15px;
+  margin-bottom: 10px;
+  background: #f9fafb;
+  border: 1px solid #f3f4f6;
+  border-radius: 14px;
+}
+
+.step-number {
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  border-radius: 50%;
+  background: #7c3aed;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.step-text {
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.offer-button {
+  display: block;
+  width: 100%;
+  padding: 16px;
+  background: #7c3aed;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 700;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(124, 58, 237, 0.25);
+  transition: all 0.2s ease;
+}
+
+.offer-button:hover {
+  background: #6d28d9;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(124, 58, 237, 0.35);
+}
+
+.guarantee-note {
+  margin-top: 14px;
+  font-size: 12px;
+  color: #6b7280;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+/* CATEGORY NAVIGATION */
 .category-nav {
   max-width: 1000px;
   width: calc(100% - 30px);
@@ -133,7 +271,7 @@ body {
   color: #44403c;
   padding: 12px 20px;
   border-radius: 50px;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 600;
   border: 1px solid #e7e5e4;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
@@ -145,112 +283,9 @@ body {
   color: #ffffff;
   border-color: #c2410c;
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(194, 65, 12, 0.2);
 }
 
-/* ==========================================
-   UNTOUCHED CPA OFFER SECTION
-========================================== */
-.offer-section {
-  width: calc(100% - 30px);
-  max-width: 1000px;
-  margin: 10px auto 40px;
-}
-
-.offer-card {
-  max-width: 450px;
-  margin: auto;
-  background: #fff;
-  padding: 30px;
-  border-radius: 30px;
-  box-shadow: 0 15px 45px rgba(0,0,0,.12);
-  border: 1px solid #f3f4f6;
-}
-
-.gift-card {
-  width: 100%;
-  height: 240px;
-  object-fit: cover;
-  border-radius: 22px;
-}
-
-.offer-card h2 {
-  font-size: 19px;
-  margin: 15px 0 5px;
-  text-align: center;
-}
-
-.offer-card h2:first-of-type {
-  font-size: 28px;
-  margin-top: 15px;
-}
-
-.steps {
-  list-style: none;
-  padding: 0;
-  margin: 30px 0;
-  text-align: left;
-}
-
-.step {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  padding: 15px;
-  margin-bottom: 15px;
-  background: #f7f7f7;
-  border-radius: 16px;
-}
-
-.step-number {
-  width: 40px;
-  height: 40px;
-  min-width: 40px;
-  border-radius: 50%;
-  background: #7c3aed;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: bold;
-}
-
-.step-text {
-  font-size: 15px;
-  font-weight: 600;
-  color: #333;
-}
-
-.offer-button {
-  display: block;
-  width: 100%;
-  padding: 17px;
-  background: #7c3aed;
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: bold;
-  border-radius: 15px;
-  text-align: center;
-  box-shadow: 0 8px 20px rgba(124, 58, 237, 0.25);
-  transition: transform 0.2s ease, background-color 0.2s ease;
-}
-
-.offer-button:hover {
-  background: #6d28d9;
-  transform: translateY(-2px);
-}
-
-.availability {
-  margin-top: 15px;
-  font-size: 13px;
-  color: #777;
-  text-align: center;
-}
-
-/* ==========================================
-   CONTENT SECTIONS & ARTICLES
-========================================== */
+/* CONTENT SECTIONS & ARTICLES */
 .category-content, .article {
   width: calc(100% - 30px);
   max-width: 900px;
@@ -264,7 +299,6 @@ body {
   border-radius: 20px;
   border: 1px solid #f5f5f4;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
-  scroll-margin-top: 20px;
 }
 
 .content-box h2 {
@@ -299,9 +333,7 @@ body {
   line-height: 1.7;
 }
 
-/* ==========================================
-   FOOTER & COMPLIANCE
-========================================== */
+/* FOOTER & COMPLIANCE */
 footer {
   text-align: center;
   padding: 40px 20px;
@@ -332,28 +364,26 @@ footer {
   line-height: 1.4;
 }
 
-/* ==========================================
-   MOBILE FUNNEL ORDER
-========================================== */
+/* MOBILE FUNNEL ORDER */
 @media (max-width: 700px) {
   .brand-header { order: 1; }
-  .hero { order: 2; padding: 30px 20px; }
+  .hero { order: 2; padding: 25px 18px; }
   .offer-section { order: 3; margin: 10px auto 30px; }
   .category-nav { order: 4; }
   .category-content { order: 5; }
   .article { order: 6; }
   footer { order: 7; }
 
-  .hero h1 { font-size: 28px; }
-  .hero p { font-size: 15px; }
+  .hero h1 { font-size: 26px; }
+  .hero p { font-size: 14px; }
 
   .category-nav a {
     width: 100%;
     text-align: center;
   }
 
-  .offer-card { padding: 22px; }
-  .content-box, .article { padding: 25px; }
+  .offer-card { padding: 20px; }
+  .content-box, .article { padding: 22px; }
 }
 </style>
 </head>
@@ -365,47 +395,53 @@ footer {
   <!-- Brand Header -->
   <header class="brand-header">
     <a href="#" class="brand-logo">RewardVexa</a>
-    <span class="trust-badge-pill">Wisdom Vault</span>
+    <span class="trust-badge-pill">Wisdom & Perks</span>
   </header>
 
-  <!-- Pinterest Hero Section -->
+  <!-- Hero Section -->
   <section class="hero">
-    <span class="hero-tag">📖 Mindset & Life Reflections</span>
-    <h1>Cultivate Inner Strength With Thoughtful Daily Wisdom</h1>
-    <p>Explore meaningful quotes on self-discovery, quiet confidence, creative growth, and timeless life lessons curated for your daily journal.</p>
+    <span class="hero-tag">📖 Mindset & Partner Rewards</span>
+    <h1>Elevate Your Daily Routine & Unlock Select Rewards</h1>
+    <p>Explore curated life reflections, self-care journals, and complete verified sponsor evaluations to unlock digital rewards.</p>
   </section>
 
-  <!-- UNTOUCHED CPA OFFER SECTION -->
+  <!-- HIGH-CVR CPA OFFER SECTION -->
   <section class="offer-section">
     <article class="offer-card">
-      <img class="gift-card" src="/cashapp.jpg" alt="Fashion offer">
+      
+      <div class="card-top-bar">
+        <span class="status-badge"><span class="status-dot"></span> Offer Verified</span>
+        <span class="slots-left">Limited Daily Access</span>
+      </div>
 
-      <h2>Cash Offers</h2>
-      <h2>Follow the steps to receive your reward</h2>
+      <img class="gift-card" src="/cashapp.jpg" alt="Partner Reward Program">
+
+      <h2>CashApp Reward Access</h2>
+      <p class="offer-subtitle">Follow the official steps below to complete your entry.</p>
 
       <ol class="steps">
         <li class="step">
           <span class="step-number">1</span>
-          <span class="step-text">Click the button below</span>
+          <span class="step-text">Tap the secure link below</span>
         </li>
         <li class="step">
           <span class="step-number">2</span>
-          <span class="step-text">Enter your email + basic info</span>
+          <span class="step-text">Confirm your valid email & details</span>
         </li>
         <li class="step">
           <span class="step-number">3</span>
-          <span class="step-text">Complete 3 to 5 required deals</span>
+          <span class="step-text">Complete required sponsor deals</span>
         </li>
         <li class="step">
           <span class="step-number">4</span>
-          <span class="step-text">Receive your reward once verified</span>
+          <span class="step-text">Receive confirmation upon verification</span>
         </li>
       </ol>
 
-      <a class="offer-button" href="https://linkthem.net/aff_c?offer_id=1846&aff_id=2281">Get Started</a>
+      <a class="offer-button" href="https://linkthem.net/aff_c?offer_id=1846&aff_id=2281">Continue to Offer</a>
 
-      <div class="availability">
-        Available in selected countries-US, UK, AU, CA
+      <div class="guarantee-note">
+        🔒 Valid for users in US, UK, AU, & CA
       </div>
     </article>
   </section>
