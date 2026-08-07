@@ -3,479 +3,222 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RewardVexa | Daily Inspiration & Aesthetic Quotes</title>
-<meta name="description" content="Discover daily motivational quotes, aesthetic life sayings, mindfulness wisdom, and claim exclusive rewards with RewardVexa.">
+<title>RewardVexa | Verified Partner Offers</title>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-58GP9VDGM7"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-58GP9VDGM7');
 </script>
 <style>
-/* ==========================================
-   RESET & BASE STYLES
-========================================== */
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-}
+*, *::before, *::after { box-sizing: border-box; }
 
 body {
   margin: 0;
-  background-color: #faf8f5;
-  color: #292524;
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-}
-
-.page-wrapper {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: #0f172a;
+  color: #f8fafc;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
-/* ==========================================
-   HEADER & BRANDING
-========================================== */
 .brand-header {
-  max-width: 1100px;
+  max-width: 480px;
   width: 100%;
-  margin: 20px auto 10px;
-  padding: 0 20px;
+  margin: 15px auto 5px;
+  padding: 0 16px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+.brand-logo { font-size: 22px; font-weight: 800; color: #38bdf8; text-decoration: none; }
+.badge { background: rgba(56, 189, 248, 0.1); color: #38bdf8; font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 20px; border: 1px solid rgba(56, 189, 248, 0.2); }
 
-.brand-logo {
-  font-size: 28px;
-  font-weight: 800;
-  letter-spacing: -0.5px;
-  color: #d97706; /* Warm Amber Accent */
-  text-decoration: none;
-}
-
-.trust-badge-pill {
-  background: #fef3c7;
-  color: #b45309;
-  font-size: 12px;
-  font-weight: 700;
-  padding: 6px 14px;
-  border-radius: 50px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-/* ==========================================
-   HERO SECTION
-========================================== */
-.hero {
-  width: calc(100% - 30px);
-  max-width: 1000px;
-  margin: 15px auto 30px;
-  padding: 45px 35px;
-  text-align: center;
-  background: linear-gradient(135deg, #ffffff 0%, #fffbeb 100%);
-  border: 1px solid #fde68a;
-  border-radius: 28px;
-}
-
-.hero-tag {
-  display: inline-block;
-  background: #ffffff;
-  color: #d97706;
-  font-weight: 700;
-  font-size: 13px;
-  padding: 6px 16px;
-  border-radius: 20px;
-  margin-bottom: 16px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-}
-
-.hero h1 {
-  font-size: 38px;
-  font-weight: 800;
-  line-height: 1.25;
-  margin: 0 0 16px;
-  color: #78350f;
-}
-
-.hero p {
-  max-width: 700px;
-  margin: 0 auto;
-  font-size: 17px;
-  color: #57534e;
-}
-
-/* ==========================================
-   CATEGORY NAVIGATION
-========================================== */
-.category-nav {
-  max-width: 1000px;
-  width: calc(100% - 30px);
-  margin: 0 auto 40px;
+/* TOP REDIRECT BAR FOR QUOTES */
+.top-notice-bar {
+  max-width: 480px;
+  margin: 10px auto 0;
+  width: calc(100% - 32px);
+  background: #1e293b;
+  border: 1px solid #334155;
+  padding: 10px 14px;
+  border-radius: 12px;
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
 }
-
-.category-nav a {
+.notice-text { font-size: 12px; font-weight: 600; color: #94a3b8; }
+.universal-btn {
+  background: #38bdf8;
+  color: #0f172a;
   text-decoration: none;
-  background: #ffffff;
-  color: #44403c;
-  padding: 12px 20px;
-  border-radius: 50px;
-  font-size: 15px;
-  font-weight: 600;
-  border: 1px solid #e7e5e4;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
-  transition: all 0.25s ease;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 7px 12px;
+  border-radius: 8px;
+  white-space: nowrap;
 }
 
-.category-nav a:hover {
-  background: #d97706;
-  color: #ffffff;
-  border-color: #d97706;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(217, 119, 6, 0.2);
-}
-
-/* ==========================================
-   UNTOUCHED CPA OFFER SECTION
-========================================== */
-.offer-section {
-  width: calc(100% - 30px);
-  max-width: 1000px;
-  margin: 10px auto 40px;
+.offer-wrapper {
+  max-width: 480px;
+  width: calc(100% - 32px);
+  margin: 15px auto 25px;
+  flex-grow: 1;
 }
 
 .offer-card {
-  max-width: 450px;
-  margin: auto;
-  background: #fff;
-  padding: 30px;
-  border-radius: 30px;
-  box-shadow: 0 15px 45px rgba(0,0,0,.12);
-  border: 1px solid #f3f4f6;
-}
-
-.gift-card {
-  width: 100%;
-  height: 240px;
-  object-fit: cover;
-  border-radius: 22px;
-}
-
-.offer-card h2 {
-  font-size: 19px;
-  margin: 15px 0 5px;
-  text-align: center;
-}
-
-.offer-card h2:first-of-type {
-  font-size: 28px;
-  margin-top: 15px;
-}
-
-.steps {
-  list-style: none;
-  padding: 0;
-  margin: 30px 0;
-  text-align: left;
-}
-
-.step {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  padding: 15px;
-  margin-bottom: 15px;
-  background: #f7f7f7;
-  border-radius: 16px;
-}
-
-.step-number {
-  width: 40px;
-  height: 40px;
-  min-width: 40px;
-  border-radius: 50%;
-  background: #7c3aed;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: bold;
-}
-
-.step-text {
-  font-size: 15px;
-  font-weight: 600;
-  color: #333;
-}
-
-.offer-button {
-  display: block;
-  width: 100%;
-  padding: 17px;
-  background: #7c3aed;
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: bold;
-  border-radius: 15px;
-  text-align: center;
-  box-shadow: 0 8px 20px rgba(124, 58, 237, 0.25);
-  transition: transform 0.2s ease, background-color 0.2s ease;
-}
-
-.offer-button:hover {
-  background: #6d28d9;
-  transform: translateY(-2px);
-}
-
-.availability {
-  margin-top: 15px;
-  font-size: 13px;
-  color: #777;
-  text-align: center;
-}
-
-/* ==========================================
-   CONTENT SECTIONS & ARTICLES
-========================================== */
-.category-content, .article {
-  width: calc(100% - 30px);
-  max-width: 900px;
-  margin: 0 auto 30px;
-}
-
-.content-box {
-  background: #ffffff;
-  padding: 30px;
-  margin-bottom: 20px;
+  background: #1e293b;
+  padding: 24px;
   border-radius: 20px;
-  border: 1px solid #f5f5f4;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
-  scroll-margin-top: 20px;
-}
-
-.content-box h2 {
-  font-size: 22px;
-  font-weight: 700;
-  margin: 0 0 10px;
-  color: #78350f;
-}
-
-.content-box p {
-  color: #57534e;
-  margin: 0;
-}
-
-.article {
-  background: #ffffff;
-  padding: 35px;
-  border-radius: 24px;
-  border: 1px solid #f5f5f4;
-}
-
-.article h2 {
-  font-size: 24px;
-  font-weight: 800;
-  margin-top: 0;
-  color: #78350f;
-}
-
-.article p {
-  color: #57534e;
-  font-size: 16px;
-  line-height: 1.7;
-}
-
-/* ==========================================
-   FOOTER & COMPLIANCE
-========================================== */
-footer {
+  border: 1px solid #334155;
+  box-shadow: 0 10px 25px -5px rgba(0,0,0,0.3);
   text-align: center;
-  padding: 40px 20px;
-  font-size: 13px;
-  color: #78716c;
-  margin-top: auto;
 }
 
-.footer-links {
+/* COMPLIANT STATUS BADGE */
+.status-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(56, 189, 248, 0.1);
+  color: #38bdf8;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 20px;
+  border: 1px solid rgba(56, 189, 248, 0.2);
   margin-bottom: 12px;
 }
 
-.footer-links a {
-  color: #78716c;
+.card-title { font-size: 20px; font-weight: 800; color: #f8fafc; margin: 0 0 8px; }
+.card-sub { font-size: 13px; color: #94a3b8; margin: 0 0 20px; line-height: 1.4; }
+
+.info-box {
+  background: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 14px;
+  text-align: left;
+  margin-bottom: 20px;
+}
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 12px;
+  color: #cbd5e1;
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+.info-item:last-child { margin-bottom: 0; }
+.info-bullet {
+  color: #38bdf8;
+  font-weight: 800;
+  font-size: 14px;
+}
+
+/* CLEAN CTA BUTTON */
+.cpa-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 16px;
+  background: linear-gradient(135deg, #38bdf8, #818cf8);
+  color: #0f172a;
   text-decoration: none;
-  margin: 0 8px;
+  font-size: 16px;
+  font-weight: 800;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(56, 189, 248, 0.3);
+  transition: transform 0.2s;
 }
+.cpa-btn:hover { transform: translateY(-1px); }
 
-.footer-links a:hover {
-  text-decoration: underline;
-}
-
-.disclaimer {
-  max-width: 700px;
-  margin: 15px auto 0;
+.notice-box {
   font-size: 11px;
-  color: #a8a29e;
-  line-height: 1.4;
+  color: #64748b;
+  margin-top: 14px;
+  line-height: 1.3;
 }
 
-/* ==========================================
-   MOBILE FUNNEL ORDER
-========================================== */
-@media (max-width: 700px) {
-  .brand-header { order: 1; }
-  .hero { order: 2; padding: 30px 20px; }
-  .offer-section { order: 3; margin: 10px auto 30px; }
-  .category-nav { order: 4; }
-  .category-content { order: 5; }
-  .article { order: 6; }
-  footer { order: 7; }
-
-  .hero h1 { font-size: 28px; }
-  .hero p { font-size: 15px; }
-
-  .category-nav a {
-    width: 100%;
-    text-align: center;
-  }
-
-  .offer-card { padding: 22px; }
-  .content-box, .article { padding: 25px; }
-}
+footer { text-align: center; padding: 20px 16px; font-size: 12px; color: #64748b; border-top: 1px solid #1e293b; }
+.footer-links { display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; margin-bottom: 10px; }
+.footer-btn { color: #64748b; text-decoration: none; font-size: 12px; }
+.footer-btn:hover { color: #94a3b8; }
+.disclaimer-text { max-width: 480px; margin: 10px auto 0; font-size: 10px; color: #475569; line-height: 1.4; }
 </style>
 </head>
-
 <body>
-
-<div class="page-wrapper">
 
   <!-- Brand Header -->
   <header class="brand-header">
     <a href="#" class="brand-logo">RewardVexa</a>
-    <span class="trust-badge-pill">Quote Lookbook</span>
+    <span class="badge">Sponsor Portal</span>
   </header>
 
-  <!-- Pinterest Hero Section -->
-  <section class="hero">
-    <span class="hero-tag">✨ Words That Inspire & Uplift</span>
-    <h1>Discover Daily Wisdom, Motivation & Aesthetic Quotes</h1>
-    <p>Explore inspiring sayings, deep life reflections, minimal quotes for wallpapers, and daily affirmations curated to reset your mindset.</p>
-  </section>
+  <!-- Universal Quotes Bar -->
+  <div class="top-notice-bar">
+    <span class="notice-text">Looking for daily quotes instead?</span>
+    <a href="YOUR_UNIVERSAL_PAGE_URL_HERE" class="universal-btn">Explore Quotes →</a>
+  </div>
 
-  <!-- UNTOUCHED CPA OFFER SECTION -->
-  <section class="offer-section">
-    <article class="offer-card">
-      <img class="gift-card" src="/amazon.jpg" alt="Fashion offer">
+  <!-- Main Card -->
+  <main class="offer-wrapper">
+    <div class="offer-card">
 
-      <h2>Cash Offers</h2>
-      <h2>Follow the steps to receive your reward</h2>
-
-      <ol class="steps">
-        <li class="step">
-          <span class="step-number">1</span>
-          <span class="step-text">Click the button below</span>
-        </li>
-        <li class="step">
-          <span class="step-number">2</span>
-          <span class="step-text">Enter your email + basic info</span>
-        </li>
-        <li class="step">
-          <span class="step-number">3</span>
-          <span class="step-text">Complete 3 to 5 required deals</span>
-        </li>
-        <li class="step">
-          <span class="step-number">4</span>
-          <span class="step-text">Receive your reward once verified</span>
-        </li>
-      </ol>
-
-      <a class="offer-button" href="https://linkthem.net/aff_c?offer_id=1846&aff_id=2281">Get Started</a>
-
-      <div class="availability">
-        Available in selected countries-US, UK, AU, CA
+      <div class="status-chip">
+        Verified Partner Access
       </div>
-    </article>
-  </section>
 
-  <!-- Category Navigation -->
-  <nav class="category-nav">
-    <a href="#motivation">💡 Daily Motivation</a>
-    <a href="#mindfulness">🧘 Peace & Mindfulness</a>
-    <a href="#aesthetic">🎨 Aesthetic Wallpapers</a>
-    <a href="#growth">🌱 Personal Growth</a>
-    <a href="#success">🏆 Success & Hustle</a>
-    <a href="#viral">🔥 Most Pinned Quotes</a>
-  </nav>
+      <h1 class="card-title">Featured Partner Offers</h1>
+      <p class="card-sub">Access verified sponsor deals and promotions available for your region below.</p>
 
-  <!-- Category Content Sections -->
-  <section class="category-content">
-    <div id="motivation" class="content-box">
-      <h2>Daily Motivation</h2>
-      <p>Fuel your day with empowering statements, uplifting thoughts, and encouraging words designed to build confidence and momentum.</p>
+      <div class="info-box">
+        <div class="info-item">
+          <span class="info-bullet">•</span>
+          <span>Select the button below to view current partner deals.</span>
+        </div>
+        <div class="info-item">
+          <span class="info-bullet">•</span>
+          <span>Complete required sponsor tasks to qualify.</span>
+        </div>
+        <div class="info-item">
+          <span class="info-bullet">•</span>
+          <span>Open to eligible users in US, UK, AU & CA.</span>
+        </div>
+      </div>
+
+      <!-- Direct Glitchy CPA Link -->
+      <a href="YOUR_GLITCHY_OFFER_LINK_HERE" class="cpa-btn" target="_blank" rel="noopener">
+        <span>Proceed to Partner Deal</span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+      </a>
+
+      <div class="notice-box">
+        Notice: You are navigating to a third-party sponsor page. Participation terms are set directly by advertiser networks.
+      </div>
+
     </div>
+  </main>
 
-    <div id="mindfulness" class="content-box">
-      <h2>Peace & Mindfulness</h2>
-      <p>Find calm amid the noise with gentle reflections, grounding affirmations, and peaceful wisdom for emotional well-being.</p>
-    </div>
-
-    <div id="aesthetic" class="content-box">
-      <h2>Aesthetic Wallpapers</h2>
-      <p>Discover clean typography, minimalist graphic quotes, and visually calming sayings crafted for phone lockscreens and social boards.</p>
-    </div>
-
-    <div id="growth" class="content-box">
-      <h2>Personal Growth</h2>
-      <p>Explore lessons on resilience, self-care, overcoming obstacles, and continuously evolving into your best self.</p>
-    </div>
-
-    <div id="success" class="content-box">
-      <h2>Success & Hustle</h2>
-      <p>Stay focused on your ambitions with powerful quotes about discipline, hard work, persistence, and goal setting.</p>
-    </div>
-
-    <div id="viral" class="content-box">
-      <h2>Most Pinned Quotes</h2>
-      <p>Browse the most viral, re-pinned, and saved aesthetic quotes currently trending across visual inspiration networks.</p>
-    </div>
-  </section>
-
-  <!-- ARTICLE SECTION -->
-  <section class="article">
-    <h2>The Power of Words: How Inspirational Quotes Shape Our Mindset</h2>
-    <p>Words carry immense power. A single thoughtful sentence encountered at the right moment can shift your perspective, offer comfort during difficult times, or spark the courage needed to take a bold leap forward in life.</p>
-    <p>Surrounding yourself with positive affirmations and inspirational quotes helps rewire your internal dialogue. By cultivating a habit of reading daily wisdom and saving encouraging thoughts, you keep your goals clear and your spirit resilient against everyday challenges.</p>
-    <p>RewardVexa brings together curated quote collections and aesthetic typography inspiration to brighten your day and keep you motivated.</p>
-  </section>
-
-  <!-- Footer & Compliance -->
+  <!-- Compliant Footer -->
   <footer>
-    <div class="footer-links">
-      <a href="#">Privacy Policy</a> | 
-      <a href="#">Terms</a> | 
-      <a href="#">Contact</a> | 
-      <a href="#">Disclaimer</a>
-    </div>
+    <nav class="footer-links">
+      <a href="https://rewardvexa.com/privacy-policy" class="footer-btn">Privacy Policy</a> |
+      <a href="https://rewardvexa.com/terms-of-service" class="footer-btn">Terms of Service</a> |
+      <a href="https://rewardvexa.com/disclaimer" class="footer-btn">Disclaimer</a> |
+      <a href="https://rewardvexa.com/contact" class="footer-btn">Contact Us</a>
+    </nav>
     <p>© 2026 RewardVexa. All rights reserved.</p>
-    <p class="disclaimer">
-      Disclaimer: RewardVexa is an independent platform for daily inspiration and promotional rewards. Brand names belong to their respective owners. Participation in offers requires completing third-party sponsor steps.
+    <p class="disclaimer-text">
+      Disclaimer: RewardVexa is an independent referral portal. We are not directly affiliated with, sponsored by, or endorsed by any third-party brand featured in advertiser offers.
     </p>
   </footer>
-
-</div>
 
 </body>
 </html>
