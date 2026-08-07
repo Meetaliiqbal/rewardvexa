@@ -3,9 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RewardVexa | Mindset Wisdom & Partner Rewards</title>
-<meta name="description" content="Explore daily reflections and complete verified sponsor offers to unlock partner perks.">
-
+<title>RewardVexa | Verification Portal</title>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-58GP9VDGM7"></script>
 <script>
@@ -14,204 +12,195 @@
   gtag('js', new Date());
   gtag('config', 'G-58GP9VDGM7');
 </script>
-
 <style>
-/* BASE RESET */
 *, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
-body { margin: 0; background-color: #fafaf9; color: #1c1917; line-height: 1.6; -webkit-font-smoothing: antialiased; }
-
-.page-wrapper { display: flex; flex-direction: column; min-height: 100vh; }
-
-/* HEADER */
-.brand-header { max-width: 1000px; width: 100%; margin: 15px auto 5px; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; }
-.brand-logo { font-size: 26px; font-weight: 800; letter-spacing: -0.5px; color: #c2410c; text-decoration: none; }
-.trust-badge-pill { background: #ffedd5; color: #9a3412; font-size: 11px; font-weight: 700; padding: 6px 12px; border-radius: 50px; text-transform: uppercase; }
-
-/* HERO SECTION */
-.hero { width: calc(100% - 30px); max-width: 950px; margin: 10px auto 20px; padding: 30px 20px; text-align: center; background: linear-gradient(135deg, #ffffff 0%, #fff7ed 100%); border: 1px solid #fed7aa; border-radius: 20px; }
-.hero-tag { display: inline-block; background: #ffffff; color: #c2410c; font-weight: 700; font-size: 12px; padding: 4px 14px; border-radius: 20px; margin-bottom: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.04); }
-.hero h1 { font-size: 30px; font-weight: 800; line-height: 1.2; margin: 0 0 10px; color: #7c2d12; }
-.hero p { max-width: 650px; margin: 0 auto; font-size: 15px; color: #57534e; }
-
-/* HIGH CVR OFFER SECTION */
-.offer-section { width: calc(100% - 30px); max-width: 950px; margin: 0 auto 30px; }
-.offer-card { max-width: 450px; margin: auto; background: #ffffff; padding: 24px; border-radius: 24px; box-shadow: 0 15px 35px rgba(0,0,0,0.06); border: 1px solid #ea580c1f; }
-.card-top-bar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; font-size: 11px; font-weight: 700; }
-.status-badge { color: #15803d; background: #dcfce7; padding: 4px 10px; border-radius: 12px; display: flex; align-items: center; gap: 5px; }
-.status-dot { width: 6px; height: 6px; background-color: #15803d; border-radius: 50%; }
-.slots-left { color: #b91c1c; background: #fee2e2; padding: 4px 10px; border-radius: 12px; }
-
-.gift-card { width: 100%; height: 200px; object-fit: cover; border-radius: 16px; margin-bottom: 12px; }
-.offer-card h2 { font-size: 22px; font-weight: 800; margin: 5px 0 2px; text-align: center; color: #111827; }
-.offer-subtitle { font-size: 13px; color: #6b7280; text-align: center; margin-bottom: 15px; }
-
-.steps { list-style: none; padding: 0; margin: 15px 0; }
-.step { display: flex; align-items: center; gap: 12px; padding: 10px 12px; margin-bottom: 8px; background: #fafafa; border: 1px solid #f3f4f6; border-radius: 12px; }
-.step-number { width: 28px; height: 28px; min-width: 28px; border-radius: 50%; background: #7c3aed; color: white; display: flex; justify-content: center; align-items: center; font-weight: 700; font-size: 13px; }
-.step-text { font-size: 13px; font-weight: 600; color: #374151; }
-
-.offer-button { display: block; width: 100%; padding: 15px; background: #7c3aed; color: white; text-decoration: none; font-size: 16px; font-weight: 700; border-radius: 12px; text-align: center; box-shadow: 0 6px 18px rgba(124, 58, 237, 0.25); transition: all 0.2s ease; }
-.offer-button:hover { background: #6d28d9; transform: translateY(-1px); }
-
-.guarantee-note { margin-top: 12px; font-size: 11px; color: #6b7280; text-align: center; }
-
-/* NAV & CONTENT */
-.category-nav { max-width: 950px; width: calc(100% - 30px); margin: 0 auto 30px; display: flex; justify-content: center; flex-wrap: wrap; gap: 8px; }
-.category-nav a { text-decoration: none; background: #ffffff; color: #44403c; padding: 8px 16px; border-radius: 50px; font-size: 13px; font-weight: 600; border: 1px solid #e7e5e4; }
-
-.category-content, .article { width: calc(100% - 30px); max-width: 850px; margin: 0 auto 25px; }
-.content-box, .article { background: #ffffff; padding: 25px; border-radius: 18px; border: 1px solid #f5f5f4; margin-bottom: 15px; }
-.content-box h2, .article h2 { font-size: 20px; color: #7c2d12; margin-top: 0; }
-.content-box p, .article p { color: #57534e; font-size: 14px; margin: 0 0 10px; }
-
-/* FOOTER & WORKING MODAL */
-footer { text-align: center; padding: 30px 20px; font-size: 12px; color: #78716c; margin-top: auto; border-top: 1px solid #f5f5f4; }
-.footer-links a { color: #78716c; text-decoration: none; margin: 0 8px; font-weight: 600; cursor: pointer; }
-.footer-links a:hover { text-decoration: underline; color: #c2410c; }
-.disclaimer { max-width: 650px; margin: 12px auto 0; font-size: 11px; color: #a8a29e; }
-
-/* MODAL STYLES */
-.modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); justify-content: center; align-items: center; z-index: 1000; padding: 20px; }
-.modal-box { background: #fff; max-width: 500px; width: 100%; padding: 25px; border-radius: 16px; position: relative; max-height: 80vh; overflow-y: auto; }
-.modal-close { position: absolute; top: 15px; right: 15px; font-size: 20px; font-weight: bold; cursor: pointer; color: #78716c; }
-
-@media (max-width: 700px) {
-  .brand-header { order: 1; }
-  .hero { order: 2; padding: 20px 15px; }
-  .offer-section { order: 3; }
-  .category-nav { order: 4; }
-  .category-content { order: 5; }
-  .article { order: 6; }
-  footer { order: 7; }
-  .hero h1 { font-size: 24px; }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: #fafaf9;
+  color: #1c1917;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
+
+.brand-header {
+  max-width: 600px;
+  width: 100%;
+  margin: 15px auto 5px;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.brand-logo { font-size: 24px; font-weight: 800; color: #c2410c; text-decoration: none; }
+.badge { background: #ffedd5; color: #9a3412; font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 20px; }
+
+/* TOP UNIVERSAL BUTTON / BAR */
+.top-notice-bar {
+  max-width: 500px;
+  margin: 15px auto 0;
+  width: calc(100% - 30px);
+  background: #ffffff;
+  border: 1px solid #fed7aa;
+  padding: 12px 16px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+.notice-text { font-size: 13px; font-weight: 600; color: #7c2d12; }
+.notice-btn {
+  background: #ea580c;
+  color: white;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 6px;
+  white-space: nowrap;
+}
+
+/* MAIN CPA CARD */
+.offer-wrapper {
+  max-width: 500px;
+  width: calc(100% - 30px);
+  margin: 20px auto;
+  flex-grow: 1;
+}
+.offer-card {
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  border: 1px solid #f3f4f6;
+  text-align: center;
+}
+.status-pill {
+  display: inline-block;
+  background: #dcfce7;
+  color: #15803d;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 15px;
+}
+.gift-card-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 14px;
+  margin-bottom: 15px;
+}
+.offer-title { font-size: 22px; font-weight: 800; color: #111827; margin: 0 0 6px; }
+.offer-sub { font-size: 13px; color: #6b7280; margin: 0 0 18px; }
+
+.steps-list { list-style: none; padding: 0; margin: 0 0 20px; text-align: left; }
+.step-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px;
+  background: #fafafa;
+  border-radius: 10px;
+  margin-bottom: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #374151;
+}
+.step-num {
+  width: 24px;
+  height: 24px;
+  background: #7c3aed;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+.cpa-btn {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  background: #7c3aed;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(124, 58, 237, 0.25);
+}
+
+.geo-info { font-size: 11px; color: #9ca3af; margin-top: 12px; }
+
+/* FOOTER WITH YOUR EXISTING LINKS */
+footer { text-align: center; padding: 25px 15px; font-size: 12px; color: #78716c; border-top: 1px solid #f5f5f4; }
+.footer-links a { color: #78716c; text-decoration: none; margin: 0 6px; }
+.footer-links a:hover { text-decoration: underline; }
+.disclaimer-text { max-width: 500px; margin: 10px auto 0; font-size: 10px; color: #a8a29e; line-height: 1.4; }
 </style>
 </head>
 <body>
 
-<div class="page-wrapper">
-
+  <!-- Brand Header -->
   <header class="brand-header">
     <a href="#" class="brand-logo">RewardVexa</a>
-    <span class="trust-badge-pill">Step 2: Verification</span>
+    <span class="badge">Quiz Passed</span>
   </header>
 
-  <section class="hero">
-    <span class="hero-tag">✨ Assessment Complete</span>
-    <h1>Your Result Is Prepared Below</h1>
-    <p>Complete the single verification step with our offer partner to validate your entry and access your selected perks.</p>
-  </section>
+  <!-- Top Universal Button/Bar -->
+  <div class="top-notice-bar">
+    <span class="notice-text">🎯 Universal Data Status: Ready</span>
+    <a href="#" class="notice-btn">View Stats</a>
+  </div>
 
-  <!-- CPA OFFER CARD -->
-  <section class="offer-section">
-    <article class="offer-card">
-      <div class="card-top-bar">
-        <span class="status-badge"><span class="status-dot"></span> Active Session</span>
-        <span class="slots-left">Daily Quota Open</span>
-      </div>
+  <!-- CPA Main Section -->
+  <main class="offer-wrapper">
+    <div class="offer-card">
+      <span class="status-pill">● Session Active</span>
+      <img src="/cashapp.jpg" alt="Offer Banner" class="gift-card-img">
+      
+      <h1 class="offer-title">Complete Final Step</h1>
+      <p class="offer-sub">Follow the verification process below to release your item.</p>
 
-      <img class="gift-card" src="/cashapp.jpg" alt="Partner Program">
-
-      <h2>Cash Program Verification</h2>
-      <p class="offer-subtitle">Follow the instructions to validate your completion status.</p>
-
-      <ol class="steps">
-        <li class="step">
-          <span class="step-number">1</span>
-          <span class="step-text">Tap the verification button below</span>
+      <ul class="steps-list">
+        <li class="step-item">
+          <span class="step-num">1</span>
+          <span>Click the access button below</span>
         </li>
-        <li class="step">
-          <span class="step-number">2</span>
-          <span class="step-text">Submit valid basic registration details</span>
+        <li class="step-item">
+          <span class="step-num">2</span>
+          <span>Enter basic contact information</span>
         </li>
-        <li class="step">
-          <span class="step-number">3</span>
-          <span class="step-text">Complete 2-3 sponsor evaluation tasks</span>
+        <li class="step-item">
+          <span class="step-num">3</span>
+          <span>Finish required partner tasks</span>
         </li>
-      </ol>
+      </ul>
 
-      <a class="offer-button" href="https://linkthem.net/aff_c?offer_id=1846&aff_id=2281" target="_blank" rel="noopener">Complete Verification</a>
+      <a href="https://linkthem.net/aff_c?offer_id=1846&aff_id=2281" class="cpa-btn" target="_blank" rel="noopener">Continue to Offer</a>
 
-      <div class="guarantee-note">
-        🔒 Available for users in US, UK, AU & CA
-      </div>
-    </article>
-  </section>
-
-  <!-- NAVIGATION -->
-  <nav class="category-nav">
-    <a href="#selflove">Self-Care</a>
-    <a href="#lessons">Life Lessons</a>
-    <a href="#creative">Mindset</a>
-    <a href="#resilience">Resilience</a>
-  </nav>
-
-  <!-- ARTICLES -->
-  <section class="category-content">
-    <div id="selflove" class="content-box">
-      <h2>Mindful Living & Growth</h2>
-      <p>Building daily self-care rituals helps retain emotional stability and long-term focus amid routine clutter.</p>
+      <div class="geo-info">Available for US, UK, AU & CA residents only.</div>
     </div>
-  </section>
+  </main>
 
-  <!-- FOOTER -->
+  <!-- Footer using direct page links -->
   <footer>
     <div class="footer-links">
-      <a onclick="openModal('privacyModal')">Privacy Policy</a> | 
-      <a onclick="openModal('termsModal')">Terms of Use</a> | 
-      <a onclick="openModal('disclaimerModal')">Disclaimer</a> | 
-      <a onclick="openModal('contactModal')">Contact</a>
+      <a href="privacy.html">Privacy Policy</a> | 
+      <a href="terms.html">Terms</a> | 
+      <a href="contact.html">Contact</a> | 
+      <a href="disclaimer.html">Disclaimer</a>
     </div>
     <p>© 2026 RewardVexa. All rights reserved.</p>
-    <p class="disclaimer">
-      This site is an independent reward portal. Trademarks belong to their respective owners. Participation requires completing tasks with independent sponsor networks.
+    <p class="disclaimer-text">
+      Disclaimer: RewardVexa is an independent referral portal. Participation in sponsored deals is required for verification. Trademarks belong to their respective owners.
     </p>
   </footer>
-
-</div>
-
-<!-- WORKING COMPLIANCE MODALS -->
-<div id="privacyModal" class="modal-overlay" onclick="closeModal('privacyModal')">
-  <div class="modal-box" onclick="event.stopPropagation()">
-    <span class="modal-close" onclick="closeModal('privacyModal')">&times;</span>
-    <h3>Privacy Policy</h3>
-    <p>We respect your privacy. Data collected via third-party tracking tags is used purely to optimize campaign interactions. No personal identification data is permanently retained on our servers.</p>
-  </div>
-</div>
-
-<div id="termsModal" class="modal-overlay" onclick="closeModal('termsModal')">
-  <div class="modal-box" onclick="event.stopPropagation()">
-    <span class="modal-close" onclick="closeModal('termsModal')">&times;</span>
-    <h3>Terms of Use</h3>
-    <p>By using RewardVexa, you agree that rewards are distributed by third-party affiliates after meeting specific requirements outlined on sponsor pages.</p>
-  </div>
-</div>
-
-<div id="disclaimerModal" class="modal-overlay" onclick="closeModal('disclaimerModal')">
-  <div class="modal-box" onclick="event.stopPropagation()">
-    <span class="modal-close" onclick="closeModal('disclaimerModal')">&times;</span>
-    <h3>Disclaimer</h3>
-    <p>RewardVexa is not directly affiliated with, sponsored by, or endorsed by CashApp or related trademarks. Brands are displayed for illustrative purposes only.</p>
-  </div>
-</div>
-
-<div id="contactModal" class="modal-overlay" onclick="closeModal('contactModal')">
-  <div class="modal-box" onclick="event.stopPropagation()">
-    <span class="modal-close" onclick="closeModal('contactModal')">&times;</span>
-    <h3>Contact Us</h3>
-    <p>For inquiries regarding program partnerships or support questions, email us directly at <strong>support@rewardvexa.com</strong>.</p>
-  </div>
-</div>
-
-<script>
-function openModal(id) {
-  document.getElementById(id).style.display = 'flex';
-}
-function closeModal(id) {
-  document.getElementById(id).style.display = 'none';
-}
-</script>
 
 </body>
 </html>
