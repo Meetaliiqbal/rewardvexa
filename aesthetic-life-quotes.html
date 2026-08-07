@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RewardVexa | Cash Program Verification</title>
+<title>RewardVexa | Partner Verification</title>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-58GP9VDGM7"></script>
 <script>
@@ -18,7 +18,7 @@
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  background-color: #f4f5f7;
+  background-color: #f8fafc;
   color: #0f172a;
   display: flex;
   flex-direction: column;
@@ -35,8 +35,8 @@ body {
   align-items: center;
   justify-content: space-between;
 }
-.brand-logo { font-size: 22px; font-weight: 800; color: #00d632; text-decoration: none; letter-spacing: -0.5px; }
-.badge { background: #dcfce7; color: #15803d; font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 20px; }
+.brand-logo { font-size: 22px; font-weight: 800; color: #16a34a; text-decoration: none; letter-spacing: -0.5px; }
+.badge { background: #f1f5f9; color: #475569; font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 20px; border: 1px solid #e2e8f0; }
 
 /* TOP NOTICE BAR FOR UNIVERSAL PAGE */
 .top-notice-bar {
@@ -50,7 +50,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.02);
 }
 .notice-text { font-size: 12px; font-weight: 600; color: #475569; }
 .universal-btn {
@@ -79,7 +79,7 @@ body {
   padding: 24px;
   border-radius: 20px;
   border: 1px solid #e2e8f0;
-  box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.03);
 }
 
 .card-status {
@@ -103,11 +103,11 @@ body {
   border: 1px solid #f1f5f9;
 }
 
-.offer-title { font-size: 22px; font-weight: 800; color: #0f172a; margin: 0 0 6px; text-align: center; }
-.offer-sub { font-size: 13px; color: #64748b; margin: 0 0 20px; text-align: center; line-height: 1.4; }
+.offer-title { font-size: 20px; font-weight: 800; color: #0f172a; margin: 0 0 6px; text-align: center; }
+.offer-sub { font-size: 13px; color: #64748b; margin: 0 0 18px; text-align: center; line-height: 1.4; }
 
 /* CLEAN STEPS LIST */
-.steps-list { list-style: none; padding: 0; margin: 0 0 22px; }
+.steps-list { list-style: none; padding: 0; margin: 0 0 18px; }
 .step-item {
   display: flex;
   align-items: center;
@@ -124,7 +124,7 @@ body {
 .step-num {
   width: 24px;
   height: 24px;
-  background: #00d632;
+  background: #16a34a;
   color: #ffffff;
   border-radius: 50%;
   display: flex;
@@ -135,35 +135,43 @@ body {
   flex-shrink: 0;
 }
 
-/* HIGH CVR CASH CTA BUTTON */
+/* HIGH CVR CTA BUTTON */
 .cpa-btn {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
   width: 100%;
-  padding: 16px;
-  background: #00d632;
+  padding: 15px;
+  background: #16a34a;
   color: #ffffff;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 800;
   border-radius: 12px;
-  box-shadow: 0 4px 14px rgba(0, 214, 50, 0.35);
+  box-shadow: 0 4px 12px rgba(22, 163, 74, 0.25);
   transition: all 0.2s ease;
 }
 .cpa-btn:hover {
-  background: #00b82b;
-  box-shadow: 0 6px 20px rgba(0, 214, 50, 0.45);
-  transform: translateY(-1px);
+  background: #15803d;
 }
 
-.geo-info { font-size: 11px; color: #94a3b8; text-align: center; margin-top: 14px; }
+/* COMPLIANCE NOTICE BOX INSIDE CARD */
+.card-notice {
+  background: #f1f5f9;
+  border-radius: 8px;
+  padding: 10px;
+  margin-top: 15px;
+  font-size: 11px;
+  color: #64748b;
+  line-height: 1.3;
+  text-align: center;
+}
 
 /* FOOTER */
 footer { text-align: center; padding: 20px 16px; font-size: 12px; color: #64748b; border-top: 1px solid #e2e8f0; background: #ffffff; }
 .footer-links a { color: #64748b; text-decoration: none; margin: 0 6px; }
-.footer-links a:hover { text-decoration: underline; color: #00d632; }
+.footer-links a:hover { text-decoration: underline; color: #16a34a; }
 .disclaimer-text { max-width: 480px; margin: 10px auto 0; font-size: 10px; color: #94a3b8; line-height: 1.4; }
 </style>
 </head>
@@ -172,7 +180,7 @@ footer { text-align: center; padding: 20px 16px; font-size: 12px; color: #64748b
   <!-- Brand Header -->
   <header class="brand-header">
     <a href="#" class="brand-logo">RewardVexa</a>
-    <span class="badge">Quiz Complete</span>
+    <span class="badge">Verification Required</span>
   </header>
 
   <!-- Universal Page Redirect Bar -->
@@ -185,14 +193,14 @@ footer { text-align: center; padding: 20px 16px; font-size: 12px; color: #64748b
   <main class="offer-wrapper">
     <div class="offer-card">
       <div class="card-status">
-        <span class="live-pill"><span class="dot"></span> Reward Active</span>
-        <span class="session-time">Slots Reserved</span>
+        <span class="live-pill"><span class="dot"></span> Active Offer</span>
+        <span class="session-time">Sponsor Portal</span>
       </div>
 
-      <img src="/cashapp.jpg" alt="Cash Program Banner" class="gift-card-img">
+      <img src="/cashapp.jpg" alt="Partner Offer Banner" class="gift-card-img">
       
-      <h1 class="offer-title">Cash Reward Verification</h1>
-      <p class="offer-sub">Complete the quick sponsor steps below to finalize your account status.</p>
+      <h1 class="offer-title">Sponsor Offer Verification</h1>
+      <p class="offer-sub">Complete the evaluation steps with our independent sponsor to continue.</p>
 
       <ul class="steps-list">
         <li class="step-item">
@@ -201,21 +209,23 @@ footer { text-align: center; padding: 20px 16px; font-size: 12px; color: #64748b
         </li>
         <li class="step-item">
           <span class="step-num">2</span>
-          <span>Submit your valid basic registration info</span>
+          <span>Submit basic requested registration info</span>
         </li>
         <li class="step-item">
           <span class="step-num">3</span>
-          <span>Finish required sponsor evaluation tasks</span>
+          <span>Complete required sponsor deals</span>
         </li>
       </ul>
 
-      <!-- Primary High CVR Cash CTA -->
+      <!-- Primary Compliant CPA CTA -->
       <a href="https://linkthem.net/aff_c?offer_id=1846&aff_id=2281" class="cpa-btn" target="_blank" rel="noopener">
-        <span>Continue to Verification</span>
+        <span>Proceed to Partner Offer</span>
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
       </a>
 
-      <div class="geo-info">🔒 Official Sponsor Page • Valid for US, UK, AU & CA</div>
+      <div class="card-notice">
+        Notice: Completion of sponsor deals is required by independent ad networks. Valid for US, UK, AU & CA residents.
+      </div>
     </div>
   </main>
 
@@ -229,7 +239,7 @@ footer { text-align: center; padding: 20px 16px; font-size: 12px; color: #64748b
     </div>
     <p>© 2026 RewardVexa. All rights reserved.</p>
     <p class="disclaimer-text">
-      Disclaimer: RewardVexa is an independent promotion portal. Participation in third-party sponsor steps is required to complete offer verification. Trademarks belong to their respective owners.
+      Disclaimer: RewardVexa is an independent promotional portal and is not directly affiliated with, endorsed by, or sponsored by Cash App or Block, Inc. Trademarks belong to their respective owners.
     </p>
   </footer>
 
