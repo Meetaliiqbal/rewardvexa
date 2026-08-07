@@ -36,7 +36,7 @@ body {
 .brand-logo { font-size: 24px; font-weight: 800; color: #c2410c; text-decoration: none; }
 .badge { background: #ffedd5; color: #9a3412; font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 20px; }
 
-/* TOP UNIVERSAL BUTTON / BAR */
+/* TOP UNIVERSAL NOTICE BAR & BUTTON */
 .top-notice-bar {
   max-width: 500px;
   margin: 15px auto 0;
@@ -51,15 +51,19 @@ body {
   box-shadow: 0 2px 8px rgba(0,0,0,0.03);
 }
 .notice-text { font-size: 13px; font-weight: 600; color: #7c2d12; }
-.notice-btn {
+.universal-btn {
   background: #ea580c;
   color: white;
   text-decoration: none;
   font-size: 12px;
   font-weight: 700;
-  padding: 6px 12px;
-  border-radius: 6px;
+  padding: 8px 14px;
+  border-radius: 8px;
   white-space: nowrap;
+  transition: background 0.2s ease;
+}
+.universal-btn:hover {
+  background: #c2410c;
 }
 
 /* MAIN CPA CARD */
@@ -133,6 +137,10 @@ body {
   font-weight: 700;
   border-radius: 12px;
   box-shadow: 0 6px 16px rgba(124, 58, 237, 0.25);
+  transition: background 0.2s ease;
+}
+.cpa-btn:hover {
+  background: #6d28d9;
 }
 
 .geo-info { font-size: 11px; color: #9ca3af; margin-top: 12px; }
@@ -149,23 +157,24 @@ footer { text-align: center; padding: 25px 15px; font-size: 12px; color: #78716c
   <!-- Brand Header -->
   <header class="brand-header">
     <a href="#" class="brand-logo">RewardVexa</a>
-    <span class="badge">Quiz Passed</span>
+    <span class="badge">Quiz Complete</span>
   </header>
 
-  <!-- Top Universal Button/Bar -->
+  <!-- Top Universal Page Redirect Bar -->
   <div class="top-notice-bar">
-    <span class="notice-text">🎯 Universal Data Status: Ready</span>
-    <a href="#" class="notice-btn">View Stats</a>
+    <span class="notice-text">Want to see all rewards?</span>
+    <!-- Aap yahan apna Universal Directory Page ka link paste kar dein -->
+    <a href="YOUR_UNIVERSAL_PAGE_URL_HERE" class="universal-btn">Browse All Perks →</a>
   </div>
 
-  <!-- CPA Main Section -->
+  <!-- CPA Main Offer Section -->
   <main class="offer-wrapper">
     <div class="offer-card">
       <span class="status-pill">● Session Active</span>
       <img src="/cashapp.jpg" alt="Offer Banner" class="gift-card-img">
       
-      <h1 class="offer-title">Complete Final Step</h1>
-      <p class="offer-sub">Follow the verification process below to release your item.</p>
+      <h1 class="offer-title">Complete Verification</h1>
+      <p class="offer-sub">Follow the verification process below to release your selection.</p>
 
       <ul class="steps-list">
         <li class="step-item">
@@ -182,13 +191,14 @@ footer { text-align: center; padding: 25px 15px; font-size: 12px; color: #78716c
         </li>
       </ul>
 
+      <!-- Direct Single CPA Offer Button -->
       <a href="https://linkthem.net/aff_c?offer_id=1846&aff_id=2281" class="cpa-btn" target="_blank" rel="noopener">Continue to Offer</a>
 
       <div class="geo-info">Available for US, UK, AU & CA residents only.</div>
     </div>
   </main>
 
-  <!-- Footer using direct page links -->
+  <!-- Footer with Static Policy Links -->
   <footer>
     <div class="footer-links">
       <a href="privacy.html">Privacy Policy</a> | 
