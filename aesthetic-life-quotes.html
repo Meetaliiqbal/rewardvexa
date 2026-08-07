@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RewardVexa | Wisdom Vault & Exclusive Partner Perks</title>
-<meta name="description" content="Explore life lessons, self-love reflections, creative mindset quotes, and access exclusive partner rewards with RewardVexa.">
+<title>RewardVexa | Mindset Wisdom & Partner Rewards</title>
+<meta name="description" content="Explore daily reflections and complete verified sponsor offers to unlock partner perks.">
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-58GP9VDGM7"></script>
@@ -16,502 +16,202 @@
 </script>
 
 <style>
-/* RESET & BASE STYLES */
-*, *::before, *::after {
-  box-sizing: border-box;
-}
+/* BASE RESET */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+body { margin: 0; background-color: #fafaf9; color: #1c1917; line-height: 1.6; -webkit-font-smoothing: antialiased; }
 
-html {
-  scroll-behavior: smooth;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-}
+.page-wrapper { display: flex; flex-direction: column; min-height: 100vh; }
 
-body {
-  margin: 0;
-  background-color: #fafaf9;
-  color: #1c1917;
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-}
-
-.page-wrapper {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-/* HEADER & BRANDING */
-.brand-header {
-  max-width: 1100px;
-  width: 100%;
-  margin: 20px auto 10px;
-  padding: 0 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.brand-logo {
-  font-size: 28px;
-  font-weight: 800;
-  letter-spacing: -0.5px;
-  color: #c2410c;
-  text-decoration: none;
-}
-
-.trust-badge-pill {
-  background: #ffedd5;
-  color: #9a3412;
-  font-size: 12px;
-  font-weight: 700;
-  padding: 6px 14px;
-  border-radius: 50px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
+/* HEADER */
+.brand-header { max-width: 1000px; width: 100%; margin: 15px auto 5px; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; }
+.brand-logo { font-size: 26px; font-weight: 800; letter-spacing: -0.5px; color: #c2410c; text-decoration: none; }
+.trust-badge-pill { background: #ffedd5; color: #9a3412; font-size: 11px; font-weight: 700; padding: 6px 12px; border-radius: 50px; text-transform: uppercase; }
 
 /* HERO SECTION */
-.hero {
-  width: calc(100% - 30px);
-  max-width: 1000px;
-  margin: 15px auto 25px;
-  padding: 40px 30px;
-  text-align: center;
-  background: linear-gradient(135deg, #ffffff 0%, #fff7ed 100%);
-  border: 1px solid #fed7aa;
-  border-radius: 28px;
-}
+.hero { width: calc(100% - 30px); max-width: 950px; margin: 10px auto 20px; padding: 30px 20px; text-align: center; background: linear-gradient(135deg, #ffffff 0%, #fff7ed 100%); border: 1px solid #fed7aa; border-radius: 20px; }
+.hero-tag { display: inline-block; background: #ffffff; color: #c2410c; font-weight: 700; font-size: 12px; padding: 4px 14px; border-radius: 20px; margin-bottom: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.04); }
+.hero h1 { font-size: 30px; font-weight: 800; line-height: 1.2; margin: 0 0 10px; color: #7c2d12; }
+.hero p { max-width: 650px; margin: 0 auto; font-size: 15px; color: #57534e; }
 
-.hero-tag {
-  display: inline-block;
-  background: #ffffff;
-  color: #c2410c;
-  font-weight: 700;
-  font-size: 13px;
-  padding: 6px 16px;
-  border-radius: 20px;
-  margin-bottom: 16px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-}
+/* HIGH CVR OFFER SECTION */
+.offer-section { width: calc(100% - 30px); max-width: 950px; margin: 0 auto 30px; }
+.offer-card { max-width: 450px; margin: auto; background: #ffffff; padding: 24px; border-radius: 24px; box-shadow: 0 15px 35px rgba(0,0,0,0.06); border: 1px solid #ea580c1f; }
+.card-top-bar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; font-size: 11px; font-weight: 700; }
+.status-badge { color: #15803d; background: #dcfce7; padding: 4px 10px; border-radius: 12px; display: flex; align-items: center; gap: 5px; }
+.status-dot { width: 6px; height: 6px; background-color: #15803d; border-radius: 50%; }
+.slots-left { color: #b91c1c; background: #fee2e2; padding: 4px 10px; border-radius: 12px; }
 
-.hero h1 {
-  font-size: 36px;
-  font-weight: 800;
-  line-height: 1.25;
-  margin: 0 0 14px;
-  color: #7c2d12;
-}
+.gift-card { width: 100%; height: 200px; object-fit: cover; border-radius: 16px; margin-bottom: 12px; }
+.offer-card h2 { font-size: 22px; font-weight: 800; margin: 5px 0 2px; text-align: center; color: #111827; }
+.offer-subtitle { font-size: 13px; color: #6b7280; text-align: center; margin-bottom: 15px; }
 
-.hero p {
-  max-width: 700px;
-  margin: 0 auto;
-  font-size: 16px;
-  color: #57534e;
-}
+.steps { list-style: none; padding: 0; margin: 15px 0; }
+.step { display: flex; align-items: center; gap: 12px; padding: 10px 12px; margin-bottom: 8px; background: #fafafa; border: 1px solid #f3f4f6; border-radius: 12px; }
+.step-number { width: 28px; height: 28px; min-width: 28px; border-radius: 50%; background: #7c3aed; color: white; display: flex; justify-content: center; align-items: center; font-weight: 700; font-size: 13px; }
+.step-text { font-size: 13px; font-weight: 600; color: #374151; }
 
-/* HIGH-CVR CPA OFFER SECTION */
-.offer-section {
-  width: calc(100% - 30px);
-  max-width: 1000px;
-  margin: 10px auto 40px;
-}
+.offer-button { display: block; width: 100%; padding: 15px; background: #7c3aed; color: white; text-decoration: none; font-size: 16px; font-weight: 700; border-radius: 12px; text-align: center; box-shadow: 0 6px 18px rgba(124, 58, 237, 0.25); transition: all 0.2s ease; }
+.offer-button:hover { background: #6d28d9; transform: translateY(-1px); }
 
-.offer-card {
-  max-width: 480px;
-  margin: auto;
-  background: #ffffff;
-  padding: 28px;
-  border-radius: 28px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
-  border: 1px solid #f3f4f6;
-  position: relative;
-}
+.guarantee-note { margin-top: 12px; font-size: 11px; color: #6b7280; text-align: center; }
 
-.card-top-bar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 15px;
-  font-size: 12px;
-  font-weight: 700;
-}
+/* NAV & CONTENT */
+.category-nav { max-width: 950px; width: calc(100% - 30px); margin: 0 auto 30px; display: flex; justify-content: center; flex-wrap: wrap; gap: 8px; }
+.category-nav a { text-decoration: none; background: #ffffff; color: #44403c; padding: 8px 16px; border-radius: 50px; font-size: 13px; font-weight: 600; border: 1px solid #e7e5e4; }
 
-.status-badge {
-  color: #16a34a;
-  background: #dcfce7;
-  padding: 4px 10px;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
+.category-content, .article { width: calc(100% - 30px); max-width: 850px; margin: 0 auto 25px; }
+.content-box, .article { background: #ffffff; padding: 25px; border-radius: 18px; border: 1px solid #f5f5f4; margin-bottom: 15px; }
+.content-box h2, .article h2 { font-size: 20px; color: #7c2d12; margin-top: 0; }
+.content-box p, .article p { color: #57534e; font-size: 14px; margin: 0 0 10px; }
 
-.status-dot {
-  width: 7px;
-  height: 7px;
-  background-color: #16a34a;
-  border-radius: 50%;
-  display: inline-block;
-}
+/* FOOTER & WORKING MODAL */
+footer { text-align: center; padding: 30px 20px; font-size: 12px; color: #78716c; margin-top: auto; border-top: 1px solid #f5f5f4; }
+.footer-links a { color: #78716c; text-decoration: none; margin: 0 8px; font-weight: 600; cursor: pointer; }
+.footer-links a:hover { text-decoration: underline; color: #c2410c; }
+.disclaimer { max-width: 650px; margin: 12px auto 0; font-size: 11px; color: #a8a29e; }
 
-.slots-left {
-  color: #dc2626;
-  background: #fee2e2;
-  padding: 4px 10px;
-  border-radius: 12px;
-}
+/* MODAL STYLES */
+.modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); justify-content: center; align-items: center; z-index: 1000; padding: 20px; }
+.modal-box { background: #fff; max-width: 500px; width: 100%; padding: 25px; border-radius: 16px; position: relative; max-height: 80vh; overflow-y: auto; }
+.modal-close { position: absolute; top: 15px; right: 15px; font-size: 20px; font-weight: bold; cursor: pointer; color: #78716c; }
 
-.gift-card {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  border-radius: 18px;
-  margin-bottom: 15px;
-}
-
-.offer-card h2 {
-  font-size: 24px;
-  font-weight: 800;
-  margin: 10px 0 5px;
-  text-align: center;
-  color: #111827;
-}
-
-.offer-subtitle {
-  font-size: 14px;
-  color: #6b7280;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.steps {
-  list-style: none;
-  padding: 0;
-  margin: 20px 0;
-  text-align: left;
-}
-
-.step {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  padding: 12px 15px;
-  margin-bottom: 10px;
-  background: #f9fafb;
-  border: 1px solid #f3f4f6;
-  border-radius: 14px;
-}
-
-.step-number {
-  width: 32px;
-  height: 32px;
-  min-width: 32px;
-  border-radius: 50%;
-  background: #7c3aed;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: 700;
-  font-size: 14px;
-}
-
-.step-text {
-  font-size: 14px;
-  font-weight: 600;
-  color: #374151;
-}
-
-.offer-button {
-  display: block;
-  width: 100%;
-  padding: 16px;
-  background: #7c3aed;
-  color: white;
-  text-decoration: none;
-  font-size: 17px;
-  font-weight: 700;
-  border-radius: 14px;
-  text-align: center;
-  box-shadow: 0 8px 20px rgba(124, 58, 237, 0.25);
-  transition: all 0.2s ease;
-}
-
-.offer-button:hover {
-  background: #6d28d9;
-  transform: translateY(-2px);
-  box-shadow: 0 12px 24px rgba(124, 58, 237, 0.35);
-}
-
-.guarantee-note {
-  margin-top: 14px;
-  font-size: 12px;
-  color: #6b7280;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-}
-
-/* CATEGORY NAVIGATION */
-.category-nav {
-  max-width: 1000px;
-  width: calc(100% - 30px);
-  margin: 0 auto 40px;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-.category-nav a {
-  text-decoration: none;
-  background: #ffffff;
-  color: #44403c;
-  padding: 12px 20px;
-  border-radius: 50px;
-  font-size: 14px;
-  font-weight: 600;
-  border: 1px solid #e7e5e4;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
-  transition: all 0.25s ease;
-}
-
-.category-nav a:hover {
-  background: #c2410c;
-  color: #ffffff;
-  border-color: #c2410c;
-  transform: translateY(-2px);
-}
-
-/* CONTENT SECTIONS & ARTICLES */
-.category-content, .article {
-  width: calc(100% - 30px);
-  max-width: 900px;
-  margin: 0 auto 30px;
-}
-
-.content-box {
-  background: #ffffff;
-  padding: 30px;
-  margin-bottom: 20px;
-  border-radius: 20px;
-  border: 1px solid #f5f5f4;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
-}
-
-.content-box h2 {
-  font-size: 22px;
-  font-weight: 700;
-  margin: 0 0 10px;
-  color: #7c2d12;
-}
-
-.content-box p {
-  color: #57534e;
-  margin: 0;
-}
-
-.article {
-  background: #ffffff;
-  padding: 35px;
-  border-radius: 24px;
-  border: 1px solid #f5f5f4;
-}
-
-.article h2 {
-  font-size: 24px;
-  font-weight: 800;
-  margin-top: 0;
-  color: #7c2d12;
-}
-
-.article p {
-  color: #57534e;
-  font-size: 16px;
-  line-height: 1.7;
-}
-
-/* FOOTER & COMPLIANCE */
-footer {
-  text-align: center;
-  padding: 40px 20px;
-  font-size: 13px;
-  color: #78716c;
-  margin-top: auto;
-}
-
-.footer-links {
-  margin-bottom: 12px;
-}
-
-.footer-links a {
-  color: #78716c;
-  text-decoration: none;
-  margin: 0 8px;
-}
-
-.footer-links a:hover {
-  text-decoration: underline;
-}
-
-.disclaimer {
-  max-width: 700px;
-  margin: 15px auto 0;
-  font-size: 11px;
-  color: #a8a29e;
-  line-height: 1.4;
-}
-
-/* MOBILE FUNNEL ORDER */
 @media (max-width: 700px) {
   .brand-header { order: 1; }
-  .hero { order: 2; padding: 25px 18px; }
-  .offer-section { order: 3; margin: 10px auto 30px; }
+  .hero { order: 2; padding: 20px 15px; }
+  .offer-section { order: 3; }
   .category-nav { order: 4; }
   .category-content { order: 5; }
   .article { order: 6; }
   footer { order: 7; }
-
-  .hero h1 { font-size: 26px; }
-  .hero p { font-size: 14px; }
-
-  .category-nav a {
-    width: 100%;
-    text-align: center;
-  }
-
-  .offer-card { padding: 20px; }
-  .content-box, .article { padding: 22px; }
+  .hero h1 { font-size: 24px; }
 }
 </style>
 </head>
-
 <body>
 
 <div class="page-wrapper">
 
-  <!-- Brand Header -->
   <header class="brand-header">
     <a href="#" class="brand-logo">RewardVexa</a>
-    <span class="trust-badge-pill">Wisdom & Perks</span>
+    <span class="trust-badge-pill">Step 2: Verification</span>
   </header>
 
-  <!-- Hero Section -->
   <section class="hero">
-    <span class="hero-tag">📖 Mindset & Partner Rewards</span>
-    <h1>Elevate Your Daily Routine & Unlock Select Rewards</h1>
-    <p>Explore curated life reflections, self-care journals, and complete verified sponsor evaluations to unlock digital rewards.</p>
+    <span class="hero-tag">✨ Assessment Complete</span>
+    <h1>Your Result Is Prepared Below</h1>
+    <p>Complete the single verification step with our offer partner to validate your entry and access your selected perks.</p>
   </section>
 
-  <!-- HIGH-CVR CPA OFFER SECTION -->
+  <!-- CPA OFFER CARD -->
   <section class="offer-section">
     <article class="offer-card">
-      
       <div class="card-top-bar">
-        <span class="status-badge"><span class="status-dot"></span> Offer Verified</span>
-        <span class="slots-left">Limited Daily Access</span>
+        <span class="status-badge"><span class="status-dot"></span> Active Session</span>
+        <span class="slots-left">Daily Quota Open</span>
       </div>
 
-      <img class="gift-card" src="/cashapp.jpg" alt="Partner Reward Program">
+      <img class="gift-card" src="/cashapp.jpg" alt="Partner Program">
 
-      <h2>CashApp Reward Access</h2>
-      <p class="offer-subtitle">Follow the official steps below to complete your entry.</p>
+      <h2>Cash Program Verification</h2>
+      <p class="offer-subtitle">Follow the instructions to validate your completion status.</p>
 
       <ol class="steps">
         <li class="step">
           <span class="step-number">1</span>
-          <span class="step-text">Tap the secure link below</span>
+          <span class="step-text">Tap the verification button below</span>
         </li>
         <li class="step">
           <span class="step-number">2</span>
-          <span class="step-text">Confirm your valid email & details</span>
+          <span class="step-text">Submit valid basic registration details</span>
         </li>
         <li class="step">
           <span class="step-number">3</span>
-          <span class="step-text">Complete required sponsor deals</span>
-        </li>
-        <li class="step">
-          <span class="step-number">4</span>
-          <span class="step-text">Receive confirmation upon verification</span>
+          <span class="step-text">Complete 2-3 sponsor evaluation tasks</span>
         </li>
       </ol>
 
-      <a class="offer-button" href="https://linkthem.net/aff_c?offer_id=1846&aff_id=2281">Continue to Offer</a>
+      <a class="offer-button" href="https://linkthem.net/aff_c?offer_id=1846&aff_id=2281" target="_blank" rel="noopener">Complete Verification</a>
 
       <div class="guarantee-note">
-        🔒 Valid for users in US, UK, AU, & CA
+        🔒 Available for users in US, UK, AU & CA
       </div>
     </article>
   </section>
 
-  <!-- Category Navigation -->
+  <!-- NAVIGATION -->
   <nav class="category-nav">
-    <a href="#selflove">💖 Self-Love & Care</a>
-    <a href="#lessons">📜 Life Lessons</a>
-    <a href="#creative">🎨 Creative Mindset</a>
-    <a href="#resilience">🛡️ Strength & Resilience</a>
-    <a href="#quiet">🌙 Quiet Reflections</a>
-    <a href="#trending">🔥 Saved Mindset Pins</a>
+    <a href="#selflove">Self-Care</a>
+    <a href="#lessons">Life Lessons</a>
+    <a href="#creative">Mindset</a>
+    <a href="#resilience">Resilience</a>
   </nav>
 
-  <!-- Category Content Sections -->
+  <!-- ARTICLES -->
   <section class="category-content">
     <div id="selflove" class="content-box">
-      <h2>Self-Love & Care</h2>
-      <p>Embrace self-compassion, gentle boundaries, and reminders that prioritize your inner peace and personal growth above external expectations.</p>
-    </div>
-
-    <div id="lessons" class="content-box">
-      <h2>Life Lessons</h2>
-      <p>Gain perspective through timeless truths, deep reflections on change, and wisdom learned from navigating life's unexpected journeys.</p>
-    </div>
-
-    <div id="creative" class="content-box">
-      <h2>Creative Mindset</h2>
-      <p>Unlock inspiration for writing, art, and passion projects with quotes designed to break creative blocks and spark original ideas.</p>
-    </div>
-
-    <div id="resilience" class="content-box">
-      <h2>Strength & Resilience</h2>
-      <p>Find fortitude during tough seasons with powerful reminders of your courage, endurance, and ability to overcome hardship.</p>
-    </div>
-
-    <div id="quiet" class="content-box">
-      <h2>Quiet Reflections</h2>
-      <p>Savor slow moments with minimalist, calming quotes focused on gratitude, stillness, and finding joy in life's simple details.</p>
-    </div>
-
-    <div id="trending" class="content-box">
-      <h2>Saved Mindset Pins</h2>
-      <p>Discover top-pinned inspirational graphics, aesthetic typography notes, and viral wisdom prompts trending on social moodboards.</p>
+      <h2>Mindful Living & Growth</h2>
+      <p>Building daily self-care rituals helps retain emotional stability and long-term focus amid routine clutter.</p>
     </div>
   </section>
 
-  <!-- ARTICLE SECTION -->
-  <section class="article">
-    <h2>Mindful Living: The Art of Reflecting on Daily Wisdom</h2>
-    <p>In a fast-paced world filled with constant digital noise, taking a moment to read and absorb meaningful wisdom acts as a grounding anchor. Taking a pause to meditate on a powerful quote helps bring clarity to complicated feelings and realigns our priorities with what truly matters.</p>
-    <p>Integrating daily quotes into your routine—whether as morning intentions or reflective evening journal entries—builds mental resilience and fosters emotional balance. When we change the thoughts we engage with daily, we reshape how we experience the world around us.</p>
-    <p>RewardVexa brings together curated reflections and aesthetic quotes to help you build a thoughtful, inspired, and balanced lifestyle.</p>
-  </section>
-
-  <!-- Footer & Compliance -->
+  <!-- FOOTER -->
   <footer>
     <div class="footer-links">
-      <a href="#">Privacy Policy</a> | 
-      <a href="#">Terms</a> | 
-      <a href="#">Contact</a> | 
-      <a href="#">Disclaimer</a>
+      <a onclick="openModal('privacyModal')">Privacy Policy</a> | 
+      <a onclick="openModal('termsModal')">Terms of Use</a> | 
+      <a onclick="openModal('disclaimerModal')">Disclaimer</a> | 
+      <a onclick="openModal('contactModal')">Contact</a>
     </div>
     <p>© 2026 RewardVexa. All rights reserved.</p>
     <p class="disclaimer">
-      Disclaimer: RewardVexa is an independent platform for daily inspiration and promotional rewards. Brand names belong to their respective owners. Participation in offers requires completing third-party sponsor steps.
+      This site is an independent reward portal. Trademarks belong to their respective owners. Participation requires completing tasks with independent sponsor networks.
     </p>
   </footer>
 
 </div>
+
+<!-- WORKING COMPLIANCE MODALS -->
+<div id="privacyModal" class="modal-overlay" onclick="closeModal('privacyModal')">
+  <div class="modal-box" onclick="event.stopPropagation()">
+    <span class="modal-close" onclick="closeModal('privacyModal')">&times;</span>
+    <h3>Privacy Policy</h3>
+    <p>We respect your privacy. Data collected via third-party tracking tags is used purely to optimize campaign interactions. No personal identification data is permanently retained on our servers.</p>
+  </div>
+</div>
+
+<div id="termsModal" class="modal-overlay" onclick="closeModal('termsModal')">
+  <div class="modal-box" onclick="event.stopPropagation()">
+    <span class="modal-close" onclick="closeModal('termsModal')">&times;</span>
+    <h3>Terms of Use</h3>
+    <p>By using RewardVexa, you agree that rewards are distributed by third-party affiliates after meeting specific requirements outlined on sponsor pages.</p>
+  </div>
+</div>
+
+<div id="disclaimerModal" class="modal-overlay" onclick="closeModal('disclaimerModal')">
+  <div class="modal-box" onclick="event.stopPropagation()">
+    <span class="modal-close" onclick="closeModal('disclaimerModal')">&times;</span>
+    <h3>Disclaimer</h3>
+    <p>RewardVexa is not directly affiliated with, sponsored by, or endorsed by CashApp or related trademarks. Brands are displayed for illustrative purposes only.</p>
+  </div>
+</div>
+
+<div id="contactModal" class="modal-overlay" onclick="closeModal('contactModal')">
+  <div class="modal-box" onclick="event.stopPropagation()">
+    <span class="modal-close" onclick="closeModal('contactModal')">&times;</span>
+    <h3>Contact Us</h3>
+    <p>For inquiries regarding program partnerships or support questions, email us directly at <strong>support@rewardvexa.com</strong>.</p>
+  </div>
+</div>
+
+<script>
+function openModal(id) {
+  document.getElementById(id).style.display = 'flex';
+}
+function closeModal(id) {
+  document.getElementById(id).style.display = 'none';
+}
+</script>
 
 </body>
 </html>
