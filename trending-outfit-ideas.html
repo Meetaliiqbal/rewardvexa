@@ -3,503 +3,222 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RewardVexa | Trending Fashion Finds & Style Rewards</title>
-<meta name="description" content="Discover viral Pinterest fashion trends, seasonal outfit ideas, and explore fashion rewards with RewardVexa.">
+<title>RewardVexa | Exclusive Fashion Deals</title>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-58GP9VDGM7"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-58GP9VDGM7');
 </script>
 <style>
-/* ==========================================
-   RESET & BASE STYLES
-========================================== */
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-}
+*, *::before, *::after { box-sizing: border-box; }
 
 body {
   margin: 0;
-  background-color: #fafafa;
-  color: #222222;
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-}
-
-.page-wrapper {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: #111827; /* Darker Slate/Charcoal */
+  color: #f8fafc;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
-/* ==========================================
-   HEADER & BRANDING
-========================================== */
 .brand-header {
-  max-width: 1100px;
+  max-width: 480px;
   width: 100%;
-  margin: 20px auto 10px;
-  padding: 0 20px;
+  margin: 15px auto 5px;
+  padding: 0 16px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+.brand-logo { font-size: 22px; font-weight: 800; color: #f43f5e; text-decoration: none; } /* Rose Accent */
+.badge { background: rgba(244, 63, 94, 0.1); color: #fb7185; font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 20px; border: 1px solid rgba(244, 63, 94, 0.2); }
 
-.brand-logo {
-  font-size: 28px;
-  font-weight: 800;
-  letter-spacing: -0.5px;
-  color: #7c3aed;
-  text-decoration: none;
-}
-
-.trust-badge-pill {
-  background: #f3e8ff;
-  color: #6b21a8;
-  font-size: 12px;
-  font-weight: 700;
-  padding: 6px 14px;
-  border-radius: 50px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-/* ==========================================
-   PINTEREST HERO SECTION
-========================================== */
-.hero {
-  width: calc(100% - 30px);
-  max-width: 1000px;
-  margin: 15px auto 30px;
-  padding: 45px 35px;
-  text-align: center;
-  background: linear-gradient(135deg, #ffffff 0%, #f5edff 100%);
-  border: 1px solid #ebd9ff;
-  border-radius: 28px;
-}
-
-.hero-tag {
-  display: inline-block;
-  background: #ffffff;
-  color: #7c3aed;
-  font-weight: 700;
-  font-size: 13px;
-  padding: 6px 16px;
-  border-radius: 20px;
-  margin-bottom: 16px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-}
-
-.hero h1 {
-  font-size: 38px;
-  font-weight: 800;
-  line-height: 1.25;
-  margin: 0 0 16px;
-  color: #111827;
-}
-
-.hero p {
-  max-width: 700px;
-  margin: 0 auto;
-  font-size: 17px;
-  color: #4b5563;
-}
-
-/* ==========================================
-   CATEGORY NAVIGATION
-========================================== */
-.category-nav {
-  max-width: 1000px;
-  width: calc(100% - 30px);
-  margin: 0 auto 40px;
+/* TOP REDIRECT BAR FOR FASHION */
+.top-notice-bar {
+  max-width: 480px;
+  margin: 10px auto 0;
+  width: calc(100% - 32px);
+  background: #1f2937;
+  border: 1px solid #374151;
+  padding: 10px 14px;
+  border-radius: 12px;
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
 }
-
-.category-nav a {
-  text-decoration: none;
-  background: #ffffff;
-  color: #374151;
-  padding: 12px 20px;
-  border-radius: 50px;
-  font-size: 15px;
-  font-weight: 600;
-  border: 1px solid #e5e7eb;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
-  transition: all 0.25s ease;
-}
-
-.category-nav a:hover {
-  background: #7c3aed;
+.notice-text { font-size: 12px; font-weight: 600; color: #9ca3af; }
+.universal-btn {
+  background: #f43f5e;
   color: #ffffff;
-  border-color: #7c3aed;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(124, 58, 237, 0.2);
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 7px 12px;
+  border-radius: 8px;
+  white-space: nowrap;
 }
 
-/* ==========================================
-   CPA OFFER SECTION
-========================================== */
-.offer-section {
-  width: calc(100% - 30px);
-  max-width: 1000px;
-  margin: 10px auto 40px;
+.offer-wrapper {
+  max-width: 480px;
+  width: calc(100% - 32px);
+  margin: 15px auto 25px;
+  flex-grow: 1;
 }
 
 .offer-card {
-  max-width: 480px;
-  margin: 0 auto;
-  background: #ffffff;
-  padding: 32px;
-  border-radius: 28px;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.07);
-  border: 1px solid #f3f4f6;
-  position: relative;
-  overflow: hidden;
-}
-
-.offer-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 5px;
-  background: #7c3aed;
-}
-
-.gift-card-wrapper {
-  margin-bottom: 24px;
-}
-
-.gift-card {
-  width: 100%;
-  height: 230px;
-  object-fit: cover;
+  background: #1f2937;
+  padding: 24px;
   border-radius: 20px;
-}
-
-.offer-header-title {
-  font-size: 24px;
-  font-weight: 800;
-  margin: 0 0 6px;
-  color: #111827;
+  border: 1px solid #374151;
+  box-shadow: 0 10px 25px -5px rgba(0,0,0,0.4);
   text-align: center;
 }
 
-.offer-subtitle {
-  font-size: 15px;
-  color: #6b7280;
-  text-align: center;
-  margin: 0 0 24px;
-}
-
-.steps {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 28px;
-}
-
-.step {
-  display: flex;
+/* COMPLIANT STATUS BADGE */
+.status-chip {
+  display: inline-flex;
   align-items: center;
-  gap: 14px;
-  padding: 12px 16px;
-  margin-bottom: 10px;
-  background: #f9fafb;
-  border: 1px solid #f3f4f6;
-  border-radius: 14px;
-}
-
-.step-number {
-  width: 32px;
-  height: 32px;
-  min-width: 32px;
-  border-radius: 50%;
-  background: #7c3aed;
-  color: #ffffff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  gap: 6px;
+  background: rgba(244, 63, 94, 0.1);
+  color: #fb7185;
+  font-size: 11px;
   font-weight: 700;
-  font-size: 14px;
-}
-
-.step-text {
-  font-size: 14px;
-  font-weight: 600;
-  color: #374151;
-}
-
-.offer-button {
-  display: block;
-  width: 100%;
-  padding: 18px;
-  background: #7c3aed;
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: 700;
-  border-radius: 16px;
-  text-align: center;
-  box-shadow: 0 8px 20px rgba(124, 58, 237, 0.25);
-  transition: transform 0.2s ease, background-color 0.2s ease;
-}
-
-.offer-button:hover {
-  background: #6d28d9;
-  transform: translateY(-2px);
-}
-
-.availability {
-  margin-top: 16px;
-  font-size: 13px;
-  color: #6b7280;
-  text-align: center;
-}
-
-/* ==========================================
-   CONTENT SECTIONS & ARTICLES
-========================================== */
-.category-content, .article {
-  width: calc(100% - 30px);
-  max-width: 900px;
-  margin: 0 auto 30px;
-}
-
-.content-box {
-  background: #ffffff;
-  padding: 30px;
-  margin-bottom: 20px;
+  padding: 4px 10px;
   border-radius: 20px;
-  border: 1px solid #f3f4f6;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
-  scroll-margin-top: 20px;
-}
-
-.content-box h2 {
-  font-size: 22px;
-  font-weight: 700;
-  margin: 0 0 10px;
-  color: #111827;
-}
-
-.content-box p {
-  color: #4b5563;
-  margin: 0;
-}
-
-.article {
-  background: #ffffff;
-  padding: 35px;
-  border-radius: 24px;
-  border: 1px solid #f3f4f6;
-}
-
-.article h2 {
-  font-size: 24px;
-  font-weight: 800;
-  margin-top: 0;
-  color: #111827;
-}
-
-.article p {
-  color: #4b5563;
-  font-size: 16px;
-  line-height: 1.7;
-}
-
-/* ==========================================
-   FOOTER & COMPLIANCE
-========================================== */
-footer {
-  text-align: center;
-  padding: 40px 20px;
-  font-size: 13px;
-  color: #6b7280;
-  margin-top: auto;
-}
-
-.footer-links {
+  border: 1px solid rgba(244, 63, 94, 0.2);
   margin-bottom: 12px;
 }
 
-.footer-links a {
-  color: #6b7280;
+.card-title { font-size: 20px; font-weight: 800; color: #f9fafb; margin: 0 0 8px; }
+.card-sub { font-size: 13px; color: #9ca3af; margin: 0 0 20px; line-height: 1.4; }
+
+.info-box {
+  background: #111827;
+  border: 1px solid #374151;
+  border-radius: 12px;
+  padding: 14px;
+  text-align: left;
+  margin-bottom: 20px;
+}
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 12px;
+  color: #d1d5db;
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+.info-item:last-child { margin-bottom: 0; }
+.info-bullet {
+  color: #fb7185;
+  font-weight: 800;
+  font-size: 14px;
+}
+
+/* FASHION GRADIENT CTA BUTTON */
+.cpa-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 16px;
+  background: linear-gradient(135deg, #f43f5e, #fb7185);
+  color: #ffffff;
   text-decoration: none;
-  margin: 0 8px;
+  font-size: 16px;
+  font-weight: 800;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(244, 63, 94, 0.35);
+  transition: transform 0.2s;
 }
+.cpa-btn:hover { transform: translateY(-1px); }
 
-.footer-links a:hover {
-  text-decoration: underline;
-}
-
-.disclaimer {
-  max-width: 700px;
-  margin: 15px auto 0;
+.notice-box {
   font-size: 11px;
-  color: #9ca3af;
-  line-height: 1.4;
+  color: #6b7280;
+  margin-top: 14px;
+  line-height: 1.3;
 }
 
-/* ==========================================
-   MOBILE OPTIMIZATION (MOBILE-FIRST FUNNEL ORDER)
-========================================== */
-@media (max-width: 768px) {
-  .brand-header { order: 1; }
-  .hero { order: 2; padding: 30px 20px; }
-  .offer-section { order: 3; margin: 10px auto 30px; }
-  .category-nav { order: 4; }
-  .category-content { order: 5; }
-  .article { order: 6; }
-  footer { order: 7; }
-
-  .hero h1 { font-size: 28px; }
-  .hero p { font-size: 15px; }
-
-  .category-nav a {
-    width: 100%;
-    text-align: center;
-  }
-
-  .offer-card { padding: 24px 18px; }
-  .content-box, .article { padding: 22px; }
-}
+footer { text-align: center; padding: 20px 16px; font-size: 12px; color: #6b7280; border-top: 1px solid #1f2937; }
+.footer-links { display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; margin-bottom: 10px; }
+.footer-btn { color: #6b7280; text-decoration: none; font-size: 12px; }
+.footer-btn:hover { color: #9ca3af; }
+.disclaimer-text { max-width: 480px; margin: 10px auto 0; font-size: 10px; color: #4b5563; line-height: 1.4; }
 </style>
 </head>
-
 <body>
-
-<div class="page-wrapper">
 
   <!-- Brand Header -->
   <header class="brand-header">
     <a href="#" class="brand-logo">RewardVexa</a>
-    <span class="trust-badge-pill">Fashion & Style Finds</span>
+    <span class="badge">Fashion Portal</span>
   </header>
 
-  <!-- Pinterest Hero Section -->
-  <section class="hero">
-    <span class="hero-tag">✨ Style Inspiration</span>
-    <h1>Discover Trending Outfit Ideas & Fashion Rewards</h1>
-    <p>Explore high-performing fashion trends, wardrobe ideas, seasonal lookbooks, and learn how to claim featured shopping rewards.</p>
-  </section>
+  <!-- Universal Fashion Bar -->
+  <div class="top-notice-bar">
+    <span class="notice-text">Looking for daily fashion inspiration?</span>
+    <a href="YOUR_UNIVERSAL_PAGE_URL_HERE" class="universal-btn">Explore Style →</a>
+  </div>
 
-  <!-- CPA Offer Section -->
-  <section class="offer-section">
-    <article class="offer-card">
-      <div class="gift-card-wrapper">
-        <img class="gift-card" src="/shein.jpg" alt="Fashion Reward Opportunity">
+  <!-- Main Card -->
+  <main class="offer-wrapper">
+    <div class="offer-card">
+
+      <div class="status-chip">
+        Trending Fashion Offers
       </div>
 
-      <h2 class="offer-header-title">Shein Reward Opportunity</h2>
-      <p class="offer-subtitle">Follow the steps below to request your reward entry.</p>
+      <h1 class="card-title">Available Partner Rewards</h1>
+      <p class="card-sub">Access top apparel and lifestyle sponsor promotions available for your region below.</p>
 
-      <ol class="steps">
-        <li class="step">
-          <span class="step-number">1</span>
-          <span class="step-text">Click the button below</span>
-        </li>
-        <li class="step">
-          <span class="step-number">2</span>
-          <span class="step-text">Enter your email and basic info</span>
-        </li>
-        <li class="step">
-          <span class="step-number">3</span>
-          <span class="step-text">Complete required 3 to 5 partner deals</span>
-        </li>
-        <li class="step">
-          <span class="step-number">4</span>
-          <span class="step-text">Receive your reward upon verification</span>
-        </li>
-      </ol>
+      <div class="info-box">
+        <div class="info-item">
+          <span class="info-bullet">•</span>
+          <span>Click the button below to view current partner fashion offers.</span>
+        </div>
+        <div class="info-item">
+          <span class="info-bullet">•</span>
+          <span>Complete required sponsor tasks to qualify.</span>
+        </div>
+        <div class="info-item">
+          <span class="info-bullet">•</span>
+          <span>Open to eligible users in US, UK, AU & CA.</span>
+        </div>
+      </div>
 
-      <a class="offer-button" href="https://linkthem.net/aff_c?offer_id=1229&aff_id=2281" target="_blank" rel="noopener">
-        Get Started
+      <!-- Direct Glitchy CPA Link -->
+      <a href="https://linkthem.net/aff_c?offer_id=1229&aff_id=2281" class="cpa-btn" target="_blank" rel="noopener">
+        <span>Proceed to Fashion Offer</span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
       </a>
 
-      <div class="availability">
-        Available to residents in US, UK, CA, AU
+      <div class="notice-box">
+        Notice: You are navigating to a third-party sponsor page. Participation terms are set directly by advertiser networks.
       </div>
-    </article>
-  </section>
 
-  <!-- Category Navigation -->
-  <nav class="category-nav">
-    <a href="#outfits">👗 Trending Outfits</a>
-    <a href="#style">✨ Style Aesthetics</a>
-    <a href="#accessories">👜 Bags & Details</a>
-    <a href="#shoes">👟 Shoes & Footwear</a>
-    <a href="#seasonal">🌸 Seasonal Lookbook</a>
-    <a href="#viral">🔥 Viral Finds</a>
-  </nav>
-
-  <!-- Category Content Sections -->
-  <section class="category-content">
-    <div id="outfits" class="content-box">
-      <h2>Trending Outfits</h2>
-      <p>Explore curated outfit pairings, streetwear trends, and casual everyday aesthetics taking over popular fashion boards.</p>
     </div>
+  </main>
 
-    <div id="style" class="content-box">
-      <h2>Style Aesthetics</h2>
-      <p>Find inspiration for specific aesthetic directions—from minimalist capsule wardrobes to bold statement piece pairings.</p>
-    </div>
-
-    <div id="accessories" class="content-box">
-      <h2>Bags & Accessories</h2>
-      <p>Discover staple handbags, subtle jewelry accents, and trending accessory picks that elevate any outfit.</p>
-    </div>
-
-    <div id="shoes" class="content-box">
-      <h2>Shoes & Footwear</h2>
-      <p>From versatile sneakers to classic boots, check out the footwear options gaining attention right now.</p>
-    </div>
-
-    <div id="seasonal" class="content-box">
-      <h2>Seasonal Lookbook</h2>
-      <p>Transition your wardrobe smoothly with weather-appropriate layering ideas, color combinations, and classic silhouettes.</p>
-    </div>
-
-    <div id="viral" class="content-box">
-      <h2>Viral Fashion Finds</h2>
-      <p>A collection of popular fashion discoveries and outfit ideas shared across fashion channels online.</p>
-    </div>
-  </section>
-
-  <!-- Article Section -->
-  <section class="article">
-    <h2>How to Build a Styled Look on an Everyday Budget</h2>
-    <p>Creating a well-curated wardrobe comes down to focus and coordination rather than high price tags. By selecting versatile foundation pieces, cohesive colors, and thoughtful accessories, you can assemble put-together looks easily.</p>
-    <p>Seasonal updates are ideal for evaluating your closet, refreshing staple items, and experimenting with new outfit ideas found in modern trend guides.</p>
-  </section>
-
-  <!-- Footer & Compliance -->
+  <!-- Compliant Footer -->
   <footer>
-    <div class="footer-links">
-      <a href="#">Privacy Policy</a> | 
-      <a href="#">Terms of Service</a> | 
-      <a href="#">Contact Us</a> | 
-      <a href="#">Disclaimer</a>
-    </div>
+    <nav class="footer-links">
+      <a href="https://rewardvexa.com/privacy-policy" class="footer-btn">Privacy Policy</a> |
+      <a href="https://rewardvexa.com/terms-of-service" class="footer-btn">Terms of Service</a> |
+      <a href="https://rewardvexa.com/disclaimer" class="footer-btn">Disclaimer</a> |
+      <a href="https://rewardvexa.com/contact" class="footer-btn">Contact Us</a>
+    </nav>
     <p>© 2026 RewardVexa. All rights reserved.</p>
-    <p class="disclaimer">
-      Disclaimer: RewardVexa is an independent content and promotional website. All trademarks and brand names belong to their respective owners. Participation in program rewards requires completion of sponsor deals.
+    <p class="disclaimer-text">
+      Disclaimer: RewardVexa is an independent referral portal. We are not directly affiliated with, sponsored by, or endorsed by any third-party brand featured in advertiser offers.
     </p>
   </footer>
-
-</div>
 
 </body>
 </html>
