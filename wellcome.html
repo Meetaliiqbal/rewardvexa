@@ -1,0 +1,1201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RewardVexa — Ultimate Resource Directory & Rewards</title>
+  <meta name="description" content="Explore curated niche guides, lifestyle resources, mindset quotes, and partner reward opportunities.">
+  
+  <!-- Google Tag Manager / Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-58GP9VDGM7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-58GP9VDGM7');
+  </script>
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --text: #0f172a;
+      --muted: #64748b;
+      --border: #e2e8f0;
+      --primary: #4f46e5;
+      --primary-dark: #4338ca;
+      --soft: #eef2ff;
+      --success: #059669;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { text-decoration: none; color: inherit; }
+
+    /* HEADER */
+    .header {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .header-inner {
+      width: min(1120px, calc(100% - 32px));
+      height: 72px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--text);
+      font-size: 21px;
+      font-weight: 800;
+      letter-spacing: -.5px;
+    }
+    .brand-mark {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      background: var(--primary);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      font-weight: 800;
+    }
+    .header-badges {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+    .badge-pill {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--success);
+      background: #ecfdf5;
+      border: 1px solid #a7f3d0;
+      padding: 4px 10px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .badge-pill span {
+      width: 6px; height: 6px; border-radius: 50%; background: var(--success);
+    }
+
+    /* FILTER TOP BAR */
+    .filter-bar {
+      background: #ffffff;
+      border-bottom: 1px solid var(--border);
+      padding: 16px 0;
+    }
+    .filter-inner {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .filter-label {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .niche-select {
+      padding: 10px 16px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text);
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      outline: none;
+      cursor: pointer;
+      min-width: 240px;
+      transition: border-color 0.2s;
+    }
+    .niche-select:focus {
+      border-color: var(--primary);
+    }
+    .niche-buttons {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .niche-btn {
+      padding: 8px 16px;
+      font-size: 13px;
+      font-weight: 600;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: #fff;
+      color: var(--muted);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .niche-btn:hover, .niche-btn.active {
+      background: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
+    }
+
+    /* MAIN CONTAINER */
+    .main-container {
+      width: min(1000px, calc(100% - 32px));
+      margin: 32px auto 60px;
+    }
+
+    .niche-section {
+      display: none;
+      animation: fadeIn 0.4s ease;
+    }
+    .niche-section.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero-banner {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 32px;
+      margin-bottom: 28px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+    }
+    .hero-tag {
+      display: inline-block;
+      background: var(--soft);
+      color: var(--primary);
+      font-size: 12px;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    .hero-banner h1 {
+      font-size: clamp(24px, 4vw, 36px);
+      font-weight: 800;
+      margin-bottom: 10px;
+      letter-spacing: -0.5px;
+    }
+    .hero-banner p {
+      color: var(--muted);
+      font-size: 15px;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    /* CONTENT GRID & SLIDER */
+    .content-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-bottom: 28px;
+    }
+    @media (max-width: 768px) {
+      .content-grid { grid-template-columns: 1fr; }
+    }
+
+    .content-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .content-card h2 {
+      font-size: 18px;
+      font-weight: 750;
+      margin-bottom: 14px;
+      color: var(--text);
+      border-left: 4px solid var(--primary);
+      padding-left: 10px;
+    }
+
+    .slider-box {
+      background: var(--bg);
+      padding: 16px;
+      border-radius: 10px;
+      min-height: 110px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-bottom: 14px;
+    }
+    .slider-text {
+      font-size: 14px;
+      font-style: italic;
+      color: #334155;
+      margin-bottom: 8px;
+    }
+    .slider-author {
+      font-size: 11.5px;
+      font-style: normal;
+      font-weight: 700;
+      color: var(--muted);
+      text-align: right;
+    }
+    
+    .slider-controls {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 10px;
+    }
+    .slider-btn {
+      background: #fff;
+      border: 1px solid var(--border);
+      padding: 6px 14px;
+      font-size: 12px;
+      font-weight: 700;
+      border-radius: 6px;
+      cursor: pointer;
+      color: var(--text);
+      transition: all 0.2s;
+    }
+    .slider-btn:hover {
+      background: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
+    }
+    .slider-counter {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--muted);
+    }
+
+    .tips-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .tip-item {
+      background: var(--bg);
+      padding: 12px 14px;
+      border-radius: 8px;
+      font-size: 13.5px;
+      color: #334155;
+    }
+    .tip-item strong { color: var(--text); }
+
+    .asset-img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 14px;
+    }
+
+    /* COMPACT IN-CARD AFFIRMATION BOX */
+    .compact-aff-box {
+      background: #f0fdf4;
+      border: 1.5px dashed #059669;
+      border-radius: 12px;
+      padding: 16px;
+      margin-top: 14px;
+      text-align: center;
+    }
+    .compact-aff-box h4 {
+      font-size: 14px;
+      font-weight: 800;
+      color: #065f46;
+      margin-bottom: 4px;
+    }
+    .compact-aff-box p {
+      font-size: 12px;
+      color: #047857;
+      margin-bottom: 10px;
+    }
+    .compact-btn {
+      display: inline-block;
+      background: #059669;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 8px 16px;
+      border-radius: 6px;
+      transition: background 0.2s;
+    }
+    .compact-btn:hover {
+      background: #047857;
+    }
+
+    /* CPA CTA OFFER CARD */
+    .cta-card {
+      background: #ffffff;
+      border: 2px solid var(--primary);
+      border-radius: 20px;
+      padding: 32px;
+      text-align: center;
+      margin-bottom: 36px;
+      box-shadow: 0 8px 30px rgba(79, 70, 229, 0.08);
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-card::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 6px;
+      background: var(--primary);
+    }
+    .cta-badge {
+      display: inline-block;
+      background: #ecfdf5;
+      color: var(--success);
+      border: 1px solid #a7f3d0;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 4px 14px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    .cta-card h3 {
+      font-size: 22px;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+    .cta-card p {
+      font-size: 14px;
+      color: var(--muted);
+      max-width: 540px;
+      margin: 0 auto 20px;
+    }
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 32px;
+      background: var(--primary);
+      color: #fff;
+      font-size: 15px;
+      font-weight: 700;
+      border-radius: 10px;
+      transition: background 0.2s;
+    }
+    .cta-btn:hover { background: var(--primary-dark); }
+    .cta-disclaimer {
+      font-size: 11px;
+      color: #94a3b8;
+      margin-top: 12px;
+    }
+
+    /* ACCORDION FAQ */
+    .faq-section {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 28px;
+    }
+    .faq-title { font-size: 20px; font-weight: 800; text-align: center; margin-bottom: 20px; }
+    .faq-container { display: flex; flex-direction: column; gap: 10px; }
+    .faq-item { border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+    .faq-item.active { border-color: var(--primary); }
+    .faq-question {
+      width: 100%; background: #fff; border: none; padding: 14px 18px;
+      font-size: 14.5px; font-weight: 700; color: var(--text); text-align: left;
+      cursor: pointer; display: flex; justify-content: space-between; align-items: center;
+    }
+    .faq-icon { font-size: 16px; color: var(--muted); transition: transform 0.3s ease; }
+    .faq-item.active .faq-icon { transform: rotate(45deg); color: var(--primary); }
+    .faq-answer {
+      max-height: 0; overflow: hidden; transition: max-height 0.3s cubic-bezier(0, 1, 0, 1), padding 0.3s ease;
+      background: #fafafa; font-size: 13.5px; color: var(--muted); line-height: 1.6; padding: 0 18px;
+    }
+    .faq-item.active .faq-answer { max-height: 300px; padding: 14px 18px; border-top: 1px solid var(--border); }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--border);
+      background: #fff;
+      padding: 40px 18px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 12px;
+    }
+    .footer-links { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-bottom: 16px; }
+    .footer-btn { padding: 8px 14px; background: var(--bg); color: var(--muted); border: 1px solid var(--border); border-radius: 8px; font-size: 12.5px; font-weight: 600; }
+    .footer-disclaimer { max-width: 800px; margin: 16px auto 0; font-size: 11px; line-height: 1.6; color: #94a3b8; }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-inner">
+      <a href="/" class="brand">
+        <span class="brand-mark">R</span>
+        <span>RewardVexa</span>
+      </a>
+      <div class="header-badges">
+        <span class="badge-pill"><span></span> Encrypted Directory</span>
+        <span class="badge-pill"><span></span> Partner Directory</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- TOP FILTER & DROPDOWN BAR -->
+  <div class="filter-bar">
+    <div class="filter-inner">
+      <div class="filter-label">
+        <span>Categories :</span>
+        <select id="niche-dropdown" class="niche-select">
+          <option value="quotes">Inspirational Quotes & Mindset</option>
+          <option value="fashion">Fashion & Style Trends</option>
+          <option value="food">Quick Meals & Grocery Hacks</option>
+          <option value="travel">Budget Travel & Destination Guides</option>
+          <option value="nature">Nature Photography & Outdoors</option>
+          <option value="homedecor">Home Decor & Space Organization</option>
+        </select>
+      </div>
+
+      <div class="niche-buttons">
+        <button class="niche-btn active" data-target="quotes">Quotes</button>
+        <button class="niche-btn" data-target="fashion">Fashion</button>
+        <button class="niche-btn" data-target="food">Food</button>
+        <button class="niche-btn" data-target="travel">Travel</button>
+        <button class="niche-btn" data-target="nature">Nature</button>
+        <button class="niche-btn" data-target="homedecor">Home Decor</button>
+      </div>
+    </div>
+  </div>
+
+  <main class="main-container">
+
+    <!-- ==================== NICHE 1: QUOTES ==================== -->
+    <section id="quotes" class="niche-section active">
+      <div class="hero-banner">
+        <span class="hero-tag">Mindset & Growth Directory</span>
+        <h1>Inspirational Quotes & Daily Affirmations</h1>
+        <p>Explore high-impact daily mindset quotes, focus affirmations, and expandable resource sliders.</p>
+      </div>
+
+      <div class="content-grid">
+        <div class="content-card">
+          <h2>Mindset & Focus Quotes (50+ Directory)</h2>
+          <div class="slider-box">
+            <p id="quotes-display" class="slider-text">"The future belongs to those who believe in the beauty of their dreams."</p>
+            <span id="quotes-author" class="slider-author">— Eleanor Roosevelt</span>
+          </div>
+          <div class="slider-controls">
+            <button class="slider-btn" onclick="prevItem('quotes')">← Prev</button>
+            <span id="quotes-counter" class="slider-counter">1 / 50</span>
+            <button class="slider-btn" onclick="nextItem('quotes')">Next →</button>
+          </div>
+
+          <!-- COMPACT AFFIRMATION CPA BOX -->
+          <div class="compact-aff-box">
+            <h4>✨ Get Daily Success Affirmations</h4>
+            <p>Want daily mindset updates in your inbox?</p>
+            <a href="https://shorturl.at/mlFOW" target="_blank" rel="noopener noreferrer" class="compact-btn">Subscribe</a>
+          </div>
+        </div>
+
+        <div class="content-card">
+          <h2>Daily Focus Affirmations</h2>
+          <ul class="tips-list">
+            <li class="tip-item"><strong>Morning Anchor:</strong> "I am fully present in this moment, capable of handling whatever comes my way with clarity."</li>
+            <li class="tip-item"><strong>Stress Release:</strong> "I release control of things outside my power and choose to focus on constructive action."</li>
+            <li class="tip-item"><strong>Growth Mindset:</strong> "Mistakes are data points guiding me toward continuous self-improvement."</li>
+          </ul>
+          <br>
+          <img class="asset-img" src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800" alt="Mindset Mountain Landscape">
+        </div>
+      </div>
+
+      <!-- CPA CTA CARD (Offer ID 1846 for Quotes) -->
+      <div class="cta-card">
+        <span class="cta-badge">Verified Partner Directory</span>
+        <h3>Featured Partner Offers</h3>
+        <p>Check your program eligibility to unlock exclusive partner shopping vouchers and trial deals.</p>
+        <a href="https://linkthem.net/aff_c?offer_id=1846&aff_id=2281" target="_blank" rel="noopener noreferrer" class="cta-btn">Check Eligibility Now</a>
+        <p class="cta-disclaimer">18+ Only. Valid in US, UK, CA, AU. See partner terms for details.</p>
+      </div>
+    </section>
+
+    <!-- ==================== NICHE 2: FASHION ==================== -->
+    <section id="fashion" class="niche-section">
+      <div class="hero-banner">
+        <span class="hero-tag">Style & Wardrobe Directory</span>
+        <h1>2026 Fashion Trends & Outfit Systems</h1>
+        <p>Master capsule wardrobe systems and styling tips via our 50+ item interactive guide.</p>
+      </div>
+
+      <div class="content-grid">
+        <div class="content-card">
+          <h2>Capsule Wardrobe Rules (50+ Directory)</h2>
+          <div class="slider-box">
+            <p id="fashion-display" class="slider-text">"Core Tops: 2 Neutral Crewneck Tees (White & Black), 1 Structured Button-Down."</p>
+            <span id="fashion-author" class="slider-author" style="display:none"></span>
+          </div>
+          <div class="slider-controls">
+            <button class="slider-btn" onclick="prevItem('fashion')">← Prev</button>
+            <span id="fashion-counter" class="slider-counter">1 / 50</span>
+            <button class="slider-btn" onclick="nextItem('fashion')">Next →</button>
+          </div>
+        </div>
+
+        <div class="content-card">
+          <h2>Color Matching Rules</h2>
+          <img class="asset-img" src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=800" alt="Fashion Outfit Setup">
+          <ul class="tips-list">
+            <li class="tip-item"><strong>Monochromatic Depth:</strong> Combine different textures of the same color family for an elevated height illusion.</li>
+            <li class="tip-item"><strong>The 60-30-10 Rule:</strong> 60% Base (Trousers), 30% Secondary Layer (Shirt), 10% Accent Highlight.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- CPA CTA CARD (Offer ID 1229 for Fashion) -->
+      <div class="cta-card">
+        <span class="cta-badge">Partner Apparel Perks</span>
+        <h3>Explore Apparel Vouchers & Fashion Perks</h3>
+        <p>Review current eligibility guidelines to view active sponsor shopping promotions and style perks.</p>
+        <a href="https://linkthem.net/aff_c?offer_id=1229&aff_id=2281" target="_blank" rel="noopener noreferrer" class="cta-btn">Check Fashion Perks</a>
+ <p class="cta-disclaimer">18+ Only. Valid in US, UK, CA, AU. See partner terms for details.</p>
+ </div>
+    </section>
+
+    <!-- ==================== NICHE 3: FOOD ==================== -->
+    <section id="food" class="niche-section">
+      <div class="hero-banner">
+        <span class="hero-tag">Culinary & Grocery Directory</span>
+        <h1>Quick 15-Minute Meals & Prep Systems</h1>
+        <p>Explore over 50 fast dinner recipes and smart grocery budget hacks.</p>
+      </div>
+
+      <div class="content-grid">
+        <div class="content-card">
+          <h2>Quick Meal Ideas (50+ Directory)</h2>
+          <div class="slider-box">
+            <p id="food-display" class="slider-text">"Lemon Garlic Chicken: Chop zucchini, bell peppers, and chicken breast with olive oil."</p>
+            <span id="food-author" class="slider-author" style="display:none"></span>
+          </div>
+          <div class="slider-controls">
+            <button class="slider-btn" onclick="prevItem('food')">← Prev</button>
+            <span id="food-counter" class="slider-counter">1 / 50</span>
+            <button class="slider-btn" onclick="nextItem('food')">Next →</button>
+          </div>
+        </div>
+
+        <div class="content-card">
+          <h2>Weekly Meal Prep Hacks</h2>
+          <img class="asset-img" src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=800" alt="Fresh Food Prep">
+          <ul class="tips-list">
+            <li class="tip-item"><strong>Batch Grains:</strong> Cook 4 portions of brown rice or quinoa on Sunday to cut weekday cooking times.</li>
+            <li class="tip-item"><strong>Greens Preservation:</strong> Store leafy greens with dry paper towels inside sealed containers.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- CPA CTA CARD (Offer ID 455 for Food) -->
+      <div class="cta-card">
+        <span class="cta-badge">Dining Directory Rewards</span>
+        <h3>View Grocery & Food Voucher Opportunities</h3>
+        <p>Explore partner program rewards and grocery trial vouchers from verified directory sponsors.</p>
+        <a href="https://linkthem.net/aff_c?offer_id=455&aff_id=2281" target="_blank" rel="noopener noreferrer" class="cta-btn">Review Program Terms</a>
+         <p class="cta-disclaimer">18+ Only. Valid in US, UK, CA, AU. See partner terms for details.</p>
+      </div>
+    </section>
+
+    <!-- ==================== NICHE 4: TRAVEL ==================== -->
+    <section id="travel" class="niche-section">
+      <div class="hero-banner">
+        <span class="hero-tag">Travel & Logistics Directory</span>
+        <h1>Budget Travel Rules & Packing Checklists</h1>
+        <p>Discover 50+ flight booking hacks and destination safety systems.</p>
+      </div>
+
+      <div class="content-grid">
+        <div class="content-card">
+          <h2>Travel & Flight Tips (50+ Directory)</h2>
+          <div class="slider-box">
+            <p id="travel-display" class="slider-text">"Currency Rule: Always pay in local destination currency when using credit cards abroad."</p>
+            <span id="travel-author" class="slider-author" style="display:none"></span>
+          </div>
+          <div class="slider-controls">
+            <button class="slider-btn" onclick="prevItem('travel')">← Prev</button>
+            <span id="travel-counter" class="slider-counter">1 / 50</span>
+            <button class="slider-btn" onclick="nextItem('travel')">Next →</button>
+          </div>
+        </div>
+
+        <div class="content-card">
+          <h2>Destination Logistics Checklist</h2>
+          <img class="asset-img" src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800" alt="Scenic Travel Destination">
+          <ul class="tips-list">
+            <li class="tip-item"><strong>Offline Maps:</strong> Download city regions over Wi-Fi before landing to navigate offline.</li>
+            <li class="tip-item"><strong>Packing Compression:</strong> Roll garments instead of folding, then vacuum-pack.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- CPA CTA CARD (Offer ID 4135 for Travel) -->
+      <div class="cta-card">
+        <span class="cta-badge">Travel Partner Promotions</span>
+        <h3>Check Travel Perks & Partner Directory Deals</h3>
+        <p>Access vacation voucher options, travel trial perks, and partner rewards by verifying eligibility.</p>
+        <a href="https://linkthem.net/aff_c?offer_id=4135&aff_id=2281" target="_blank" rel="noopener noreferrer" class="cta-btn">Check Travel Eligibility</a>
+         <p class="cta-disclaimer">18+ Only. Valid in US, UK, CA, AU. See partner terms for details.</p>
+      </div>
+    </section>
+
+    <!-- ==================== NICHE 5: NATURE ==================== -->
+    <section id="nature" class="niche-section">
+      <div class="hero-banner">
+        <span class="hero-tag">Outdoor & Wilderness Directory</span>
+        <h1>Nature Photography & Trail Essentials</h1>
+        <p>Learn wilderness safety systems and photography rules through our 50+ item directory.</p>
+      </div>
+
+      <div class="content-grid">
+        <div class="content-card">
+          <h2>Wilderness Safety & Nature Tips (50+ Directory)</h2>
+          <div class="slider-box">
+            <p id="nature-display" class="slider-text">"The 10 Essentials: Navigation, Sun Protection, First Aid, Headlamp, Repair Kit."</p>
+            <span id="nature-author" class="slider-author" style="display:none"></span>
+          </div>
+          <div class="slider-controls">
+            <button class="slider-btn" onclick="prevItem('nature')">← Prev</button>
+            <span id="nature-counter" class="slider-counter">1 / 50</span>
+            <button class="slider-btn" onclick="nextItem('nature')">Next →</button>
+          </div>
+        </div>
+
+        <div class="content-card">
+          <h2>Landscape Photography Rules</h2>
+          <img class="asset-img" src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800" alt="Deep Forest Landscape">
+          <ul class="tips-list">
+            <li class="tip-item"><strong>Golden Hour:</strong> Shoot vistas within 45 minutes of sunrise or sunset when light creates soft contrast.</li>
+            <li class="tip-item"><strong>Foreground Focus:</strong> Place rocks or water reflections in the lower grid line.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- CPA CTA CARD (Offer ID 4135 for Nature) -->
+      <div class="cta-card">
+        <span class="cta-badge">Outdoor Directory Rewards</span>
+        <h3>Explore Lifestyle & Gear Promotions</h3>
+        <p>Check eligibility for outdoor partner deals, digital cash perks, and lifestyle directories.</p>
+        <a href="https://linkthem.net/aff_c?offer_id=4135&aff_id=2281" target="_blank" rel="noopener noreferrer" class="cta-btn">Check Partner Perks</a>
+         <p class="cta-disclaimer">18+ Only. Valid in US, UK, CA, AU. See partner terms for details.</p>
+      </div>
+    </section>
+
+    <!-- ==================== NICHE 6: HOME DECOR ==================== -->
+    <section id="homedecor" class="niche-section">
+      <div class="hero-banner">
+        <span class="hero-tag">Interior & Living Space Directory</span>
+        <h1>Home Decor & Decluttering Protocols</h1>
+        <p>Optimize compact room layouts and organization systems with over 50 guides.</p>
+      </div>
+
+      <div class="content-grid">
+        <div class="content-card">
+          <h2>Home Decor Hacks (50+ Directory)</h2>
+          <div class="slider-box">
+            <p id="homedecor-display" class="slider-text">"Vertical Wall Storage: Install floating shelves up to 80% of wall height."</p>
+            <span id="homedecor-author" class="slider-author" style="display:none"></span>
+          </div>
+          <div class="slider-controls">
+            <button class="slider-btn" onclick="prevItem('homedecor')">← Prev</button>
+            <span id="homedecor-counter" class="slider-counter">1 / 50</span>
+            <button class="slider-btn" onclick="nextItem('homedecor')">Next →</button>
+          </div>
+        </div>
+
+        <div class="content-card">
+          <h2>5-Step Room Decluttering Protocol</h2>
+          <img class="asset-img" src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800" alt="Minimalist Home Interior">
+          <ul class="tips-list">
+            <li class="tip-item"><strong>12-Month Rule:</strong> Stage items unused for over 12 months in an evaluation box for donation.</li>
+            <li class="tip-item"><strong>Clear Surface Standard:</strong> Keep coffee tables and desks 80% clear.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- CPA CTA CARD (Offer ID 340 for Decor) -->
+      <div class="cta-card">
+        <span class="cta-badge">Home & Living Rewards</span>
+        <h3>View Home Improvement Perks & Offers</h3>
+        <p>Check partner program eligibility to explore home voucher directory opportunities and lifestyle perks.</p>
+        <a href="https://linkthem.net/aff_c?offer_id=340&aff_id=2281" target="_blank" rel="noopener noreferrer" class="cta-btn">Check Eligibility Now</a>
+         <p class="cta-disclaimer">18+ Only. Valid in US, UK, CA, AU. See partner terms for details.</p>
+      </div>
+    </section>
+
+    <!-- ACCORDION FAQ -->
+    <section class="faq-section">
+      <h3 class="faq-title">Frequently Asked Questions</h3>
+      <div class="faq-container">
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>How does RewardVexa work?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            RewardVexa is a curated resource and promotional directory. We provide value-focused content across multiple lifestyle topics while indexing verified partner promotional deals.
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>What are the requirements to participate in sponsor deals?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            Requirements vary per sponsor. Generally, participants must be at least 18 years old and reside in an eligible region while completing requested tasks on partner pages.
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Is user information kept secure?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            RewardVexa does not store or process sensitive personal or payment details. Data provided on third-party advertiser links is governed by their respective privacy policies.
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <nav class="footer-links">
+      <a href="https://rewardvexa.com/privacy-policy" class="footer-btn">Privacy Policy</a>
+      <a href="https://rewardvexa.com/terms-of-service" class="footer-btn">Terms of Service</a>
+      <a href="https://rewardvexa.com/disclaimer" class="footer-btn">Disclaimer</a>
+      <a href="https://rewardvexa.com/contact" class="footer-btn">Contact Us</a>
+    </nav>
+    <p>© 2026 RewardVexa. All rights reserved.</p>
+    <p class="footer-disclaimer">
+      <strong>Advertising Disclosure:</strong> RewardVexa operates as an independent resource directory. We may receive referral compensation from sponsor networks when users access links or participate in featured partner programs.
+    </p>
+  </footer>
+
+  <script>
+    // 50+ DATA ARRAYS FOR ALL 6 NICHES
+    const nicheData = {
+      quotes: [
+        { text: `"The future belongs to those who believe in the beauty of their dreams."`, author: "— Eleanor Roosevelt" },
+        { text: `"Success is not final, failure is not fatal: it is the courage to continue that counts."`, author: "— Winston Churchill" },
+        { text: `"Do not watch the clock; do what it does. Keep going."`, author: "— Sam Levenson" },
+        { text: `"Believe you can and you're halfway there."`, author: "— Theodore Roosevelt" },
+        { text: `"It always seems impossible until it's done."`, author: "— Nelson Mandela" },
+        { text: `"Act as if what you do makes a difference. It does."`, author: "— William James" },
+        { text: `"Success usually comes to those who are too busy to be looking for it."`, author: "— Henry David Thoreau" },
+        { text: `"Don't be afraid to give up the good to go for the great."`, author: "— John D. Rockefeller" },
+        { text: `"I find that the harder I work, the more luck I seem to have."`, author: "— Thomas Jefferson" },
+        { text: `"Opportunities don't happen. You create them."`, author: "— Chris Grosser" },
+        { text: `"Don't judge each day by the harvest you reap but by the seeds that you plant."`, author: "— Robert Louis Stevenson" },
+        { text: `"The best way to predict the future is to create it."`, author: "— Peter Drucker" },
+        { text: `"Everything you’ve ever wanted is on the other side of fear."`, author: "— George Addair" },
+        { text: `"Hardships often prepare an ordinary person for an extraordinary destiny."`, author: "— C.S. Lewis" },
+        { text: `"Believe in yourself, take on your challenges, dig deep within yourself to conquer fears."`, author: "— Chantal Sutherland" },
+        { text: `"The mind is everything. What you think you become."`, author: "— Buddha" },
+        { text: `"An unexamined life is not worth living."`, author: "— Socrates" },
+        { text: `"Whether you think you can or you think you can't, you're right."`, author: "— Henry Ford" },
+        { text: `"The only limit to our realization of tomorrow will be our doubts of today."`, author: "— Franklin D. Roosevelt" },
+        { text: `"Do what you can with all you have, wherever you are."`, author: "— Theodore Roosevelt" },
+        { text: `"Creativity is intelligence having fun."`, author: "— Albert Einstein" },
+        { text: `"What you get by achieving your goals is not as important as what you become."`, author: "— Zig Ziglar" },
+        { text: `"You miss 100% of the shots you don't take."`, author: "— Wayne Gretzky" },
+        { text: `"The starting point of all achievement is desire."`, author: "— Napoleon Hill" },
+        { text: `"Action is the foundational key to all success."`, author: "— Pablo Picasso" },
+        { text: `"Keep your face to the sunshine and you cannot see a shadow."`, author: "— Helen Keller" },
+        { text: `"It does not matter how slowly you go as long as you do not stop."`, author: "— Confucius" },
+        { text: `"Your time is limited, so don't waste it living someone else's life."`, author: "— Steve Jobs" },
+        { text: `"If you're going through hell, keep going."`, author: "— Winston Churchill" },
+        { text: `"Turn your wounds into wisdom."`, author: "— Oprah Winfrey" },
+        { text: `"Change your thoughts and you change your world."`, author: "— Norman Vincent Peale" },
+        { text: `"Perfection is not attainable, but if we chase perfection we can catch excellence."`, author: "— Vince Lombardi" },
+        { text: `"The secret of getting ahead is getting started."`, author: "— Mark Twain" },
+        { text: `"Limitations live only in our minds. But if we use our imaginations, our possibilities become limitless."`, author: "— Jamie Paolinetti" },
+        { text: `"Goal setting is the secret to compelling future."`, author: "— Tony Robbins" },
+        { text: `"Quality is not an act, it is a habit."`, author: "— Aristotle" },
+        { text: `"Courage is resistance to fear, mastery of fear, not absence of fear."`, author: "— Mark Twain" },
+        { text: `"Try not to become a man of success, but rather try to become a man of value."`, author: "— Albert Einstein" },
+        { text: `"Strive not to be a success, but rather to be of value."`, author: "— Albert Einstein" },
+        { text: `"Mind is a flexible mirror, adjust it, to see a better world."`, author: "— Amit Ray" },
+        { text: `"Vitality shows in not only the ability to persist but in the ability to start over."`, author: "— F. Scott Fitzgerald" },
+        { text: `"We become what we think about."`, author: "— Earl Nightingale" },
+        { text: `"Fall seven times, stand up eight."`, author: "— Japanese Proverb" },
+        { text: `"Too many of us are not living our dreams because we are living our fears."`, author: "— Les Brown" },
+        { text: `"Challenges are what make life interesting and overcoming them is what makes life meaningful."`, author: "— Joshua J. Marine" },
+        { text: `"Go confidently in the direction of your dreams. Live the life you have imagined."`, author: "— Henry David Thoreau" },
+        { text: `"You can never cross the ocean until you have the courage to lose sight of the shore."`, author: "— Christopher Columbus" },
+        { text: `"Either you run the day, or the day runs you."`, author: "— Jim Rohn" },
+        { text: `"The best revenge is massive success."`, author: "— Frank Sinatra" },
+        { text: `"Life is 10% what happens to you and 90% how you react to it."`, author: "— Charles Swindoll" }
+      ],
+      fashion: [
+        { text: `"Core Tops: 2 Neutral Crewneck Tees (White & Black), 1 Structured Button-Down."`, author: "" },
+        { text: `"Essential Bottoms: 1 Pair Dark Denim, 1 Pair Tailored Chinos, 1 Relaxed Trousers."`, author: "" },
+        { text: `"Outerwear Layers: 1 Classic Trench Coat or Utility Jacket, 1 Tailored Blazer."`, author: "" },
+        { text: `"Monochromatic Depth: Combine different textures of the same color family for an elevated illusion."`, author: "" },
+        { text: `"The 60-30-10 Rule: 60% Base clothing, 30% Secondary layer, 10% Accent highlight accessory."`, author: "" },
+        { text: `"Footwear Staples: Clean White Sneakers, Minimalist Leather Loafers, Ankle Boots."`, author: "" },
+        { text: `"Accessory Rule: Invest in a classic leather belt and structured everyday tote bag."`, author: "" },
+        { text: `"Fabric Care: Always wash delicate woolens inside out using cold water cycles."`, author: "" },
+        { text: `"Proportion Balancing: Pair oversized tops with slim-fit bottoms for clean visual symmetry."`, author: "" },
+        { text: `"Metal Matching: Keep jewelry hardware consistent (all gold or all silver tones) per outfit."`, author: "" },
+        { text: `"Denim Longevity: Freeze jeans occasionally instead of washing to maintain raw indigo dye."`, author: "" },
+        { text: `"Layering Collars: Pop shirt collars slightly under structured knit sweaters for preppy contrast."`, author: "" },
+        { text: `"Belt Customization: Match shoe leather shade precisely to belt color for formal wear."`, author: "" },
+        { text: `"V-Neck Illusion: V-neck cuts elongate the neck line, ideal for structured blazers."`, author: "" },
+        { text: `"Hats as Frames: Wide-brim fedoras balance round face shapes and add height."`, author: "" },
+        { text: `"Scarf Styling: Use silk scarves tied to handbag handles for a quick color pop."`, author: "" },
+        { text: `"Tailoring Secret: Spend extra budget on local alterations to make off-the-rack clothes fit custom."`, author: "" },
+        { text: `"Footwear Comfort: Use heel grips in new leather loafers to prevent friction blisters."`, author: "" },
+        { text: `"Vertical Striping: Pinstripe trousers create a taller leg silhouette instantly."`, author: "" },
+        { text: `"Statement Piece Rule: Limit loud patterns to one garment per look; keep surrounding items solid."`, author: "" },
+        { text: `"Trans-Seasonal Knitwear: Lightweight cashmere sweaters work seamlessly through spring and autumn."`, author: "" },
+        { text: `"Wrinkle Control: Hang garments immediately after steam drying to prevent creases."`, author: "" },
+        { text: `"Sleeve Rolling: Roll shirt sleeves neatly to the elbow using the Italian cuff method."`, author: "" },
+        { text: `"Bag Scaling: Match handbag scale to your body frame (petite bags for lean frames)."`, author: "" },
+        { text: `"Tucking Hacks: Use the French tuck (front half tucked, sides loose) for effortless styling."`, author: "" },
+        { text: `"Sunglasses Selection: Choose frame shapes opposite to your facial geometry."`, author: "" },
+        { text: `"Socks Coordination: Match dress socks to your trousers, not your shoes."`, author: "" },
+        { text: `"Button Rule: Keep bottom buttons of single-breasted suit jackets unbuttoned."`, author: "" },
+        { text: `"Watch Sizing: Case diameter should match wrist width proportionally."`, author: "" },
+        { text: `"Linen Maintenance: Embrace natural wrinkles in linen shirts for relaxed summer style."`, author: "" },
+        { text: `"White Sneaker Care: Use magic erasers to instantly restore white rubber midsoles."`, author: "" },
+        { text: `"Blazer Shoulder Fit: Shoulder seams must align precisely with your natural shoulder bone."`, author: "" },
+        { text: `"Overcoat Hem: Overcoats should end around knee height for balanced proportions."`, author: "" },
+        { text: `"Undergarment Choice: Wear seamless nude underwear under sheer white garments."`, author: "" },
+        { text: `"Pocket Square Contrast: Pocket squares should complement, not match, your tie print."`, author: "" },
+        { text: `"Puffer Jacket Rule: Quilted jackets look sharpest when fitted close to the core."`, author: "" },
+        { text: `"Cardigan Pairing: Style chunky cardigans over fitted ribbed turtleneck shirts."`, author: "" },
+        { text: `"Trench Belt Styling: Tie trench coat belts in a loose knot behind your back."`, author: "" },
+        { text: `"Tracksuit Elevation: Pair luxury fleece sweatpants with structured wool overcoats."`, author: "" },
+        { text: `"Jewelry Stacking: Mix thin gold chains of varying lengths for a layered necklace look."`, author: "" },
+        { text: `"Perfume Pulse Points: Apply fragrance to wrists, neck, and inner elbows for longevity."`, author: "" },
+        { text: `"Travel Packing: Pack versatile neutral clothing items that can mix into 10+ outfits."`, author: "" },
+        { text: `"Storage Protection: Store leather boots with cedar boot trees to retain shape."`, author: "" },
+        { text: `"Garment Steamering: Steam clothes vertically instead of ironing for fabric preservation."`, author: "" },
+        { text: `"Belt Width: Keep formal dress belts slim (approx. 1 inch); casual belts can be wider."`, author: "" },
+        { text: `"Tie Length: Tie tips should rest right at the center of your belt buckle."`, author: "" },
+        { text: `"Hat Storage: Store wide-brim hats upside down on crowns to preserve brim curve."`, author: "" },
+        { text: `"Silk Care: Hand wash silk garments in lukewarm water with baby shampoo."`, author: "" },
+        { text: `"Sweater Pill Removal: Use an electric fabric shaver to safely clear sweater pills."`, author: "" },
+        { text: `"Confidence Rule: The best accessory you can wear is authentic self-confidence."`, author: "" }
+      ],
+      food: [
+        { text: `"Lemon Garlic Chicken: Chop zucchini, bell peppers, and bake chicken breast at 200°C for 16 mins."`, author: "" },
+        { text: `"Creamy Spinach Skillet: Sauté garlic, chickpeas, baby spinach, and coconut cream."`, author: "" },
+        { text: `"Batch Grains: Cook 4 portions of brown rice or quinoa on Sunday to save weekday time."`, author: "" },
+        { text: `"Greens Preservation: Store leafy greens with dry paper towels inside airtight containers."`, author: "" },
+        { text: `"Quick Breakfast Oats: Soak rolled oats overnight with chia seeds and almond milk."`, author: "" },
+        { text: `"Sheet-Pan Salmon: Roast salmon fillets with asparagus, cherry tomatoes, and olive oil."`, author: "" },
+        { text: `"Avocado Ripening: Place unripe avocados in a brown paper bag with a banana."`, author: "" },
+        { text: `"Herb Storage: Trim herb stems and store upright in a glass of water inside the fridge."`, author: "" },
+        { text: `"Quick Vinaigrette: Shake 3 parts olive oil, 1 part balsamic vinegar, and mustard in a jar."`, author: "" },
+        { text: `"Garlic Peeling: Crush garlic cloves gently with the flat side of a knife for instant peeling."`, author: "" },
+        { text: `"Onion Tears Prevention: Chill onions in the refrigerator for 20 minutes before cutting."`, author: "" },
+        { text: `"Fluffy Rice Hack: Let cooked rice rest covered off heat for 10 minutes before fluffing."`, author: "" },
+        { text: `"Crispy Tofu: Press liquid out of tofu blocks completely, coat in cornstarch, and pan-sear."`, author: "" },
+        { text: `"Citrus Juicing: Roll citrus fruits firmly on the counter before cutting to extract max juice."`, author: "" },
+        { text: `"Egg Freshness Test: Fresh eggs sink to the bottom of a bowl of cold water."`, author: "" },
+        { text: `"Tomato Storage: Store tomatoes stem-side down at room temperature, never in the fridge."`, author: "" },
+        { text: `"Broccoli Prep: Chop broccoli florets into uniform sizes for even roasting times."`, author: "" },
+        { text: `"Quick Pan Sauce: Deglaze hot skillets with broth or wine to capture caramelized flavor."`, author: "" },
+        { text: `"Pantry Staples: Always stock canned chickpeas, crushed tomatoes, and lentil varieties."`, author: "" },
+        { text: `"Smoothie Boosting: Add frozen cauliflower florets to smoothies for creamy texture."`, author: "" },
+        { text: `"Salad Crispness: Ice-bathen wilted celery or carrots for 15 minutes to restore crunch."`, author: "" },
+        { text: `"Meat Resting: Let cooked steaks rest for 5 minutes before slicing to retain juices."`, author: "" },
+        { text: `"Baking Soda Test: Test old baking soda freshness by dropping it in white vinegar."`, author: "" },
+        { text: `"Honey Softening: Warm crystallized honey gently in a bowl of warm water."`, author: "" },
+        { text: `"Potato Longevity: Store potatoes in dark, cool spaces away from onions to prevent sprouting."`, author: "" },
+        { text: `"Quick Salad Dressing: Emulsify tahini, lemon juice, and warm water for creamy dressing."`, author: "" },
+        { text: `"Mushroom Cleaning: Wipe mushrooms clean with a damp paper towel instead of soaking."`, author: "" },
+        { text: `"Banana Freezing: Peel and freeze overripe bananas for future baking and smoothies."`, author: "" },
+        { text: `"Pasta Water Secret: Reserve one cup of starchy pasta water before draining for sauces."`, author: "" },
+        { text: `"Roast Veggie Heat: Roast root vegetables at high heat (220°C) for caramelized edges."`, author: "" },
+        { text: `"Quick Soup Base: Sauté onions, carrots, and celery (Mirepoix) as foundation for soups."`, author: "" },
+        { text: `"Ginger Peeling: Use the edge of a spoon to scrape off ginger skin effortlessly."`, author: "" },
+        { text: `"Nut Toasting: Toast raw nuts in a dry skillet over medium heat for 3 minutes."`, author: "" },
+        { text: `"Cheese Grating: Chill semi-soft cheeses in the freezer for 10 minutes before grating."`, author: "" },
+        { text: `"Quick Omelet: Whisk eggs vigorously with a splash of water for fluffy texture."`, author: "" },
+        { text: `"Salad Dressing Order: Add salt and vinegar before oil so greens don't get soggy."`, author: "" },
+        { text: `"Bacon Crisping: Bake bacon strips on wire racks inside baking sheets for even crispness."`, author: "" },
+        { text: `"Rice Reheating: Sprinkle a few drops of water over leftover rice before microwaving."`, author: "" },
+        { text: `"Quick Flatbread: Combine equal parts self-rising flour and Greek yogurt for dough."`, author: "" },
+        { text: `"Coffee Preservation: Store coffee beans in airtight opaque containers away from light."`, author: "" },
+        { text: `"Steamed Veggies: Steam greens briefly until bright green to retain vitamins."`, author: "" },
+        { text: `"Avocado Browning Prevention: Brush cut avocado surfaces with lemon juice or olive oil."`, author: "" },
+        { text: `"Chili Balancing: Add a splash of apple cider vinegar to balance overly spicy chilis."`, author: "" },
+        { text: `"Quick Pickle: Slice red onions and submerge in warm vinegar and salt for 20 mins."`, author: "" },
+        { text: `"Garlic Bread Hack: Roast whole garlic heads wrapped in foil until spreadable."`, author: "" },
+        { text: `"Salad Greens Spin: Always spin washed salad greens completely dry so dressings cling."`, author: "" },
+        { text: `"Crispy Skin Fish: Pat fish skin completely dry with paper towels before searing."`, author: "" },
+        { text: `"Quick Grain Bowl: Combine base grains, roasted greens, protein, and tahini drizzle."`, author: "" },
+        { text: `"Meal Prep Labeling: Date and label all meal prep containers for efficient rotation."`, author: "" },
+        { text: `"Mindful Eating: Take time to savor flavors and textures during every meal."`, author: "" }
+      ],
+      travel: [
+        { text: `"Currency Rule: Always pay in local destination currency with cards to bypass 3-5% conversion fees."`, author: "" },
+        { text: `"The Tuesday Algorithm: Search flights mid-week; departures Tue-Thu average lower fares."`, author: "" },
+        { text: `"Offline Maps: Download city regions over Wi-Fi before landing to navigate offline."`, author: "" },
+        { text: `"Packing Compression: Roll garments instead of folding, then use vacuum compression cubes."`, author: "" },
+        { text: `"Document Backup: Keep scanned copies of passport and insurance in secure cloud storage."`, author: "" },
+        { text: `"Power Adapters: Carry a universal plug adapter with built-in surge protection."`, author: "" },
+        { text: `"Carry-On Essentials: Always pack one change of clothes and medications in your carry-on."`, author: "" },
+        { text: `"Hydration Rule: Bring an empty reusable water bottle through airport security checks."`, author: "" },
+        { text: `"Public Wi-Fi Security: Use a trusted VPN service when connecting to hotel and airport Wi-Fi."`, author: "" },
+        { text: `"Local Sim Cards: Purchase local eSIM data plans online prior to international travel."`, author: "" },
+        { text: `"Jet Lag Recovery: Adjust your sleep schedule by 1 hour daily 3 days before departure."`, author: "" },
+        { text: `"Hotel Booking Hack: Contact hotels directly via email for unlisted room upgrade specials."`, author: "" },
+        { text: `"Luggage Tracking: Drop a Bluetooth tracker tag inside checked luggage for peace of mind."`, author: "" },
+        { text: `"Cash Backup: Always keep emergency local paper cash hidden separately in your pack."`, author: "" },
+        { text: `"Walking Shoes: Break in new travel walking footwear at least two weeks before the trip."`, author: "" },
+        { text: `"Museum Passes: Pre-book city museum passes online to skip long ticket queues."`, author: "" },
+        { text: `"Day Bag Security: Wear zippers facing forward in crowded tourist transit areas."`, author: "" },
+        { text: `"Flight Alerts: Set price tracking alerts on aggregator sites 3 months prior."`, author: "" },
+        { text: `"Travel Insurance: Secure comprehensive medical travel insurance before departure."`, author: "" },
+        { text: `"Roll vs Fold: Rolling clothes saves up to 30% more luggage space than flat folding."`, author: "" },
+        { text: `"Laundry Sheets: Pack travel detergent sheets for quick sink laundry on long trips."`, author: "" },
+        { text: `"Offline Translation: Download destination languages in translation apps for offline use."`, author: "" },
+        { text: `"Snack Packing: Carry protein bars and nuts to avoid airport price gouging."`, author: "" },
+        { text: `"Early Arrival: Arrive at airports 3 hours before international long-haul flights."`, author: "" },
+        { text: `"Pillow Hack: Pack an inflatable travel pillow to save bulky neck pillow space."`, author: "" },
+        { text: `"Charger Organization: Store cables in a dedicated zippered electronics pouch."`, author: "" },
+        { text: `"Sightseeing Timing: Visit major monuments at sunrise to avoid peak tourist crowds."`, author: "" },
+        { text: `"Local Etiquette: Research basic local customs and greeting phrases before arrival."`, author: "" },
+        { text: `"Flexible Itinerary: Leave at least one afternoon completely unplanned for serendipity."`, author: "" },
+        { text: `"Medication Supply: Pack prescription medicines in original labeled containers."`, author: "" },
+        { text: `"Layering Strategy: Dress in breathable layers for flights with changing cabin temperatures."`, author: "" },
+        { text: `"Hostel Lock: Bring your own sturdy combination padlock for hostel lockers."`, author: "" },
+        { text: `"Backup Chargers: Carry a high-capacity power bank certified for airline carry-on."`, author: "" },
+        { text: `"Car Rental Photos: Take 360-degree video footage of rental cars before driving off."`, author: "" },
+        { text: `"Midnight Flights: Red-eye flights save hotel nights and maximize destination days."`, author: "" },
+        { text: `"Toiletries Limit: Store liquids in transparent 100ml TSA-approved zip bags."`, author: "" },
+        { text: `"Shoe Storage: Place shoes in protective dust bags to keep luggage clothes clean."`, author: "" },
+        { text: `"Scarf Multi-Use: Pack a large linen scarf for use as a blanket, towel, or wrap."`, author: "" },
+        { text: `"Emergency Contacts: Write down embassy and emergency numbers on physical paper."`, author: "" },
+        { text: `"Credit Card Alert: Notify your bank of international travel dates beforehand."`, author: "" },
+        { text: `"Public Transit App: Download local metro and bus routing apps prior to arrival."`, author: "" },
+        { text: `"First Aid Kit: Pack adhesive bandages, painkillers, and antiseptic wipes."`, author: "" },
+        { text: `"Quiet Zones: Select forward cabin seats on planes for a quieter, smoother ride."`, author: "" },
+        { text: `"Souvenir Space: Pack a lightweight packable duffel bag for return trip souvenirs."`, author: "" },
+        { text: `"Discount Cards: Check eligibility for student, youth, or senior travel discounts."`, author: "" },
+        { text: `"Train Booking: Book high-speed rail tickets months in advance for lowest rates."`, author: "" },
+        { text: `"Jet Lag Sunlight: Expose yourself to morning sunlight immediately upon arrival."`, author: "" },
+        { text: `"Dry Bag Use: Use waterproof dry bags for electronics during beach or boat trips."`, author: "" },
+        { text: `"Local Market Tip: Shop local grocery stores for fresh, affordable breakfast items."`, author: "" },
+        { text: `"Mindful Travel: Embrace unexpected adventures and travel with an open, curious mind."`, author: "" }
+      ],
+      nature: [
+        { text: `"The 10 Essentials: Navigation, Sun Protection, First Aid, Headlamp, Repair Kit."`, author: "" },
+        { text: `"Hydration Formula: Plan for 0.5 liters of water per hour of moderate outdoor hiking."`, author: "" },
+        { text: `"Golden Hour: Shoot vistas within 45 minutes of sunrise or sunset for soft contrast."`, author: "" },
+        { text: `"Foreground Focus: Place rocks or water reflections in the lower grid line for depth."`, author: "" },
+        { text: `"Leave No Trace: Pack out all waste and respect fragile local wildlife habitats."`, author: "" },
+        { text: `"Layering Fabrics: Avoid cotton; wear merino wool or synthetic moisture-wicking layers."`, author: "" },
+        { text: `"Footwear Traction: Check boot treads for deep lugs to maintain grip on slick rock."`, author: "" },
+        { text: `"Wildlife Safety: Store scented items and food in bear-proof canisters or hung lines."`, author: "" },
+        { text: `"Weather Awareness: Monitor barometric pressure drops and cloud formations for storms."`, author: "" },
+        { text: `"Map and Compass: Always carry a physical topographic map alongside digital GPS."`, author: "" },
+        { text: `"Trail Pace: Maintain a steady, sustainable conversational hiking rhythm."`, author: "" },
+        { text: `"Blister Prevention: Apply moleskin or athletic tape to hot spots before blisters form."`, author: "" },
+        { text: `"Campfire Safety: Build fires only in established rings and drown completely with water."`, author: "" },
+        { text: `"Sun Protection: Wear UV-blocking polarized sunglasses and wide-brim hats."`, author: "" },
+        { text: `"Water Purification: Always boil or use certified filtration pumps on backcountry streams."`, author: "" },
+        { text: `"Emergency Whistle: Keep a shrill emergency whistle easily accessible on your chest strap."`, author: "" },
+        { text: `"Trekking Poles: Use poles to reduce knee joint impact by up to 25% on descents."`, author: "" },
+        { text: `"Trip Itinerary: Leave detailed route plans and return schedules with a trusted contact."`, author: "" },
+        { text: `"Insect Protection: Wear permethrin-treated clothing to repel ticks and mosquitoes."`, author: "" },
+        { text: `"Polarizer Filters: Use circular polarizing filters to cut glare off foliage and water."`, author: "" },
+        { text: `"Tripod Stability: Hang your camera backpack from the center hook of tripods in high winds."`, author: "" },
+        { text: `"Macro Photography: Use manual focus and narrow apertures for crisp flower shots."`, author: "" },
+        { text: `"Astrophotography: Use wide-angle lenses, tripod stability, and high ISO for starry skies."`, author: "" },
+        { text: `"River Crossing: Unclip pack waist belts before crossing swift streams for safety."`, author: "" },
+        { text: `"Hypothermia Prevention: Change out of damp sweaty base layers immediately at camp."`, author: "" },
+        { text: `"Headlamp Red Light: Use red light mode on headlamps at night to preserve night vision."`, author: "" },
+        { text: `"Tentsite Selection: Pitch tents on elevated, durable surfaces away from dead tree limbs."`, author: "" },
+        { text: `"Pack Weight: Keep total backpack weight under 20% of your total body weight."`, author: "" },
+        { text: `"Socks Spares: Always pack one extra pair of dry wool socks in a waterproof bag."`, author: "" },
+        { text: `"Wildlife Respect: Observe animals from a safe distance using telephoto camera lenses."`, author: "" },
+        { text: `"Emergency Shelter: Pack a lightweight bivy sack or emergency space blanket."`, author: "" },
+        { text: `"Duct Tape Roll: Wrap a few yards of duct tape around your trekking poles for repairs."`, author: "" },
+        { text: `"Stove Fuel Check: Weigh gas canisters before trips to ensure adequate fuel supply."`, author: "" },
+        { text: `"Trash Cleanup: Pick up stray litter along trails to preserve pristine nature."`, author: "" },
+        { text: `"Natural Framing: Use tree branches or rock arches to frame distant landscape shots."`, author: "" },
+        { text: `"Rule of Thirds: Align horizon lines with upper or lower grid lines in photography."`, author: "" },
+        { text: `"Low Light Stability: Brace your camera against solid trees or rocks when tripod-free."`, author: "" },
+        { text: `"Foot Care: Air out your feet and inspect for blisters during long lunch breaks."`, author: "" },
+        { text: `"Electrolyte Replenishment: Add electrolyte tablets to water on strenuous hot hikes."`, author: "" },
+        { text: `"Rock Scurrying: Test handholds and footholds thoroughly before shifting full weight."`, author: "" },
+        { text: `"Pack Rain Cover: Keep a waterproof pack cover deployed during sudden downpours."`, author: "" },
+        { text: `"Multi-Tool Utility: Carry a reliable multi-tool knife for camp maintenance tasks."`, author: "" },
+        { text: `"Summit Timing: Aim to reach mountain summits before noon to avoid afternoon storms."`, author: "" },
+        { text: `"Wildlife Noise: Make moderate conversation in dense brush to avoid startling bears."`, author: "" },
+        { text: `"Camera Batteries: Keep spare camera batteries warm inside inner jacket pockets."`, author: "" },
+        { text: `"Nature Journaling: Sketch observations and flora notes in a pocket field notebook."`, author: "" },
+        { text: `"Leave Only Footprints: Respect quiet natural soundscapes and wildlife peace."`, author: "" },
+        { text: `"Trail Etiquette: Yield the trail to uphill hikers when descending steep grades."`, author: "" },
+        { text: `"First Aid Check: Review wilderness first aid procedures before embarking."`, author: "" },
+        { text: `"Outdoor Wonder: Take time to pause, breathe deeply, and absorb natural stillness."`, author: "" }
+      ],
+      homedecor: [
+        { text: `"Vertical Wall Storage: Install floating shelves up to 80% of wall height."`, author: "" },
+        { text: `"Strategic Mirrors: Position mirrors opposite windows to double natural room light."`, author: "" },
+        { text: `"12-Month Rule: Stage items unused for over 12 months in an evaluation box."`, author: "" },
+        { text: `"Clear Surface Standard: Keep coffee tables and desks 80% clear of permanent clutter."`, author: "" },
+        { text: `"Lighting Layers: Combine ambient ceiling light with warm floor and desk lamps."`, author: "" },
+        { text: `"Rug Sizing: Ensure living room rug front furniture legs rest comfortably on the rug."`, author: "" },
+        { text: `"Curtain Height: Hang curtain rods close to the ceiling to create illusion of tall walls."`, author: "" },
+        { text: `"Gallery Wall Grid: Space gallery wall frames uniformly with 2-inch gaps."`, author: "" },
+        { text: `"Plant Accents: Add resilient indoor potted plants like snake plants or pothos."`, author: "" },
+        { text: `"Color Palette: Stick to a 60-30-10 color rule for cohesive room interior design."`, author: "" },
+        { text: `"Throw Pillows: Group decorative sofa throw pillows in odd-numbered clusters (3 or 5)."`, author: "" },
+        { text: `"Under-Bed Storage: Utilize low-profile rolling bins under bed frames for seasonal linens."`, author: "" },
+        { text: `"Cord Concealment: Use sleek cable management raceways along baseboards."`, author: "" },
+        { text: `"Entryway Drop Zone: Set up a dedicated tray and hooks near doors for keys and mail."`, author: "" },
+        { text: `"Bookshelf Styling: Alternate vertical book stacks with horizontal stacks and objects."`, author: "" },
+        { text: `"Accent Wall: Paint one focal accent wall in a deep contrasting tone."`, author: "" },
+        { text: `"Scent Layering: Use subtle reed diffusers or soy candles for warm ambient aroma."`, author: "" },
+        { text: `"Drawer Dividers: Organize kitchen and desk drawers with modular acrylic dividers."`, author: "" },
+        { text: `"Textile Variety: Mix textures like linen, velvet, wood, and brass for tactile depth."`, author: "" },
+        { text: `"Nightstand Minimalism: Keep nightstands clear except for a lamp, book, and water glass."`, author: "" },
+        { text: `"Pantry Decanting: Transfer dry goods into uniform airtight clear glass canisters."`, author: "" },
+        { text: `"Artwork Eye Level: Hang wall art center points at standard 57 inches from floor."`, author: "" },
+        { text: `"Coaster Placement: Place stylish coasters on all wooden surfaces to prevent rings."`, author: "" },
+        { text: `"Closet Editing: Hang clothing facing the same direction on matching velvet hangers."`, author: "" },
+        { text: `"Bathroom Baskets: Store extra toiletries in woven rattan baskets under vanities."`, author: "" },
+        { text: `"Coffee Table Tray: Corral remotes and small items inside a decorative tabletop tray."`, author: "" },
+        { text: `"Dimmer Switches: Install dimmer switches on main living room lights for cozy ambiance."`, author: "" },
+        { text: `"Wreath Accents: Hang seasonal wreaths on interior or exterior entryway doors."`, author: "" },
+        { text: `"Blanket Baskets: Store extra living room throw blankets in large woven floor bins."`, author: "" },
+        { text: `"Multi-Functional Furniture: Use storage ottomans that double as extra seating."`, author: "" },
+        { text: `"Kitchen Counter Clear: Keep appliances off counters except daily coffee makers."`, author: "" },
+        { text: `"Faux Florals: Style high-quality faux eucalyptus stems in ceramic vases."`, author: "" },
+        { text: `"Bedmaking Ritual: Layer duvets with textured coverlets and crisp white sheets."`, author: "" },
+        { text: `"Wardrobe Rotation: Store off-season winter coats in vacuum seal garment bags."`, author: "" },
+        { text: `"Door Hooks: Mount discreet over-the-door hooks for bathrobes and bags."`, author: "" },
+        { text: `"Floor Lamp Placement: Position reading floor lamps beside armchairs for task lighting."`, author: "" },
+        { text: `"Glassware Display: Showcase matching glassware on open kitchen floating shelving."`, author: "" },
+        { text: `"Shoe Rack Organization: Store daily footwear on tiered slanted wooden shoe racks."`, author: "" },
+        { text: `"Desk Mat Setup: Place leather desk blotters under keyboards to anchor workspaces."`, author: "" },
+        { text: `"Accent Chair Styling: Drape a soft faux fur throw over reading nook armchairs."`, author: "" },
+        { text: `"Window Sill Decor: Keep window sills clean or feature small herb planters."`, author: "" },
+        { text: `"Dining Table Centerpiece: Style low floral arrangements so guests can see across."`, author: "" },
+        { text: `"Laundry Sorting: Use multi-compartment hampers to separate darks and lights."`, author: "" },
+        { text: `"Wall Sconces: Install hardwired or battery wall sconces above bedroom beds."`, author: "" },
+        { text: `"Magazine Holders: Store current reading magazines in sleek metal wall racks."`, author: "" },
+        { text: `"Trash Can Placement: Hide kitchen recycling bins inside pull-out cabinet drawers."`, author: "" },
+        { text: `"Sound Absorption: Use plush area rugs and thick curtains to minimize echo."`, author: "" },
+        { text: `"Key Holder Station: Hang wall-mounted key hooks right beside the main entrance."`, author: "" },
+        { text: `"Seasonal Decor Rotation: Swap cushion covers and throws seasonally for fresh looks."`, author: "" },
+        { text: `"Mindful Space: Design your home environment to promote calm and restorative focus."`, author: "" }
+      ]
+    };
+
+    // Track current index for each niche slider
+    const currentIndexes = { quotes: 0, fashion: 0, food: 0, travel: 0, nature: 0, homedecor: 0 };
+
+    function updateSlider(niche) {
+      const data = nicheData[niche];
+      const index = currentIndexes[niche];
+      
+      if (niche === 'quotes') {
+        document.getElementById('quotes-display').innerText = data[index].text;
+        document.getElementById('quotes-author').innerText = data[index].author;
+        document.getElementById('quotes-counter').innerText = `${index + 1} / ${data.length}`;
+      } else {
+        document.getElementById(`${niche}-display`).innerText = data[index].text;
+        document.getElementById(`${niche}-counter`).innerText = `${index + 1} / ${data.length}`;
+      }
+    }
+
+    function nextItem(niche) {
+      const data = nicheData[niche];
+      currentIndexes[niche] = (currentIndexes[niche] + 1) % data.length;
+      updateSlider(niche);
+    }
+
+    function prevItem(niche) {
+      const data = nicheData[niche];
+      currentIndexes[niche] = (currentIndexes[niche] - 1 + data.length) % data.length;
+      updateSlider(niche);
+    }
+
+    // NICHE FILTER SWITCHING (Dropdown + Buttons)
+    document.addEventListener('DOMContentLoaded', () => {
+      const dropdown = document.getElementById('niche-dropdown');
+      const buttons = document.querySelectorAll('.niche-btn');
+      const sections = document.querySelectorAll('.niche-section');
+
+      function switchNiche(targetId) {
+        sections.forEach(sec => {
+          if (sec.id === targetId) {
+            sec.classList.add('active');
+          } else {
+            sec.classList.remove('active');
+          }
+        });
+
+        buttons.forEach(btn => {
+          if (btn.getAttribute('data-target') === targetId) {
+            btn.classList.add('active');
+          } else {
+            btn.classList.remove('active');
+          }
+        });
+
+        dropdown.value = targetId;
+      }
+
+      dropdown.addEventListener('change', (e) => {
+        switchNiche(e.target.value);
+      });
+
+      buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const target = btn.getAttribute('data-target');
+          switchNiche(target);
+        });
+      });
+
+      // FAQ Accordion
+      const faqQuestions = document.querySelectorAll('.faq-question');
+      faqQuestions.forEach(question => {
+        question.addEventListener('click', () => {
+          const faqItem = question.parentElement;
+          const isActive = faqItem.classList.contains('active');
+          document.querySelectorAll('.faq-item').forEach(item => item.classList.remove('active'));
+          if (!isActive) faqItem.classList.add('active');
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
